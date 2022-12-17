@@ -90,6 +90,7 @@ module.exports = {
       }),
 
       colors: {
+       black: "#141521",
         "accent": {
           "50": "#E5E5FF",
           "100": "#CCCCFF",
@@ -104,7 +105,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        sans: ["Neue Haas Grotesk Text Pro", ...defaultTheme.fontFamily.sans],
+
       },
     },
   },
