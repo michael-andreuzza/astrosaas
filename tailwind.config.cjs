@@ -88,27 +88,41 @@ module.exports = {
       backgroundImage: (theme) => ({
         screens: "url('/path-to/image.png')",
       }),
-
       colors: {
-       black: "#141521",
+        black: "#141521",
         "accent": {
-          "50": "#E5E5FF",
-          "100": "#CCCCFF",
-          "200": "#9999FF",
-          "300": "#6666FF",
-          "400": "#3333FF",
-          "500": "#0000FF",
-          "600": "#0000CC",
-          "700": "#000099",
-          "800": "#000066",
-          "900": "#000033"
+          50: "#E8E6FE",
+          100: "#D1CDFE",
+          200: "#A49CFC",
+          300: "#7265FB",
+          400: "#4434F9",
+          500: "#1A07F2",
+          600: "#1506C1",
+          700: "#100490",
+          800: "#0B0363",
+          900: "#050132"
+        },
+        orange: {
+          50: "#FFECE5",
+          100: "#FFD9CC",
+          200: "#FFB69E",
+          300: "#FF906B",
+          400: "#FF6A38",
+          500: "#FF4507",
+          600: "#D13400",
+          700: "#9E2800",
+          800: "#6B1B00",
+          900: "#330D00",
         },
       },
       fontFamily: {
-        sans: ["Neue Haas Grotesk Text Pro", ...defaultTheme.fontFamily.sans],
-
+        sans: ["Manrope", ...defaultTheme.fontFamily.sans],
+        display: ["Neue Power", ...defaultTheme.fontFamily.sans],
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+  ],
 }
