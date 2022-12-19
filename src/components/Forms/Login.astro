@@ -25,7 +25,8 @@
         class="w-full lg:h-full max-w-md md:max-w-sm md:px-0 md:w-96 mx-auto sm:px-4">
         <div class="flex flex-col">
           <div>
-            <h2 class="font-medium leading-tight text-black text-xl">
+            <h2
+              class="font-medium leading-tight text-black text-xl font-display">
               Log in to AstroSaaS
             </h2><div class="py-3">
               <span class="w-full inline-flex relative mt-3 z-0"
@@ -70,19 +71,15 @@
           <input name="_redirect" type="hidden" value="#" /><div
             class="space-y-6">
             <div>
-              <label
-                class="font-medium text-sm block mb-3 text-gray-500"
-                name="name">User name or email Adress</label
+              <label class="sr-only" name="name"
+                >User name or email Adress</label
               >
               <input
                 class="w-full focus:outline-none border py-3 appearance-none bg-gray-50 block border-gray-200 focus:bg-white focus:border-accent-500 focus:ring-accent-500 placeholder-gray-400 px-3 rounded-xl sm:text-sm text-accent-500"
                 placeholder="Type here..."
               />
             </div><div class="col-span-full">
-              <label
-                class="font-medium text-sm block mb-3 text-gray-500"
-                name="company">Password</label
-              >
+              <label class="sr-only" name="company">Password</label>
               <input
                 class="w-full focus:outline-none border py-3 appearance-none bg-gray-50 block border-gray-200 focus:bg-white focus:border-accent-500 focus:ring-accent-500 placeholder-gray-400 px-3 rounded-xl sm:text-sm text-accent-500"
                 placeholder="Type password here..."

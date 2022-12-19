@@ -2,7 +2,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 module.exports = {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     fontSize: {
       xs: [
@@ -90,39 +90,24 @@ module.exports = {
       }),
       colors: {
         black: "#141521",
-        "accent": {
-          50: "#E8E6FE",
-          100: "#D1CDFE",
-          200: "#A49CFC",
-          300: "#7265FB",
-          400: "#4434F9",
-          500: "#1A07F2",
-          600: "#1506C1",
-          700: "#100490",
-          800: "#0B0363",
-          900: "#050132"
-        },
-        orange: {
-          50: "#FFECE5",
-          100: "#FFD9CC",
-          200: "#FFB69E",
-          300: "#FF906B",
-          400: "#FF6A38",
-          500: "#FF4507",
-          600: "#D13400",
-          700: "#9E2800",
-          800: "#6B1B00",
-          900: "#330D00",
+        accent: {
+          50: "#CDADFF",
+          100: "#C198FF",
+          200: "#A86FFF",
+          300: "#9047FF",
+          400: "#771EFF",
+          500: "#6100F4",
+          600: "#4B00BC",
+          700: "#340084",
+          800: "#1E004C",
+          900: "#080014",
         },
       },
       fontFamily: {
-        sans: ["Manrope", ...defaultTheme.fontFamily.sans],
+        sans: ["Public Sans", ...defaultTheme.fontFamily.sans],
         display: ["Neue Power", ...defaultTheme.fontFamily.sans],
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/forms'),
-  ],
-}
+  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
+};

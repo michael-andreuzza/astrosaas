@@ -21,12 +21,13 @@
         >
       </div>
     </div><div
-      class="flex relative bg-white flex-1 flex-col h-screen md:flex-none md:px-28 px-4 py-16 shadow-2xl sm:justify-center z-10">
+      class="bg-white px-4 relative flex flex-1 flex-col h-screen lg:py-24 md:flex-none md:px-28 py-10 shadow-2xl sm:justify-center xl:py-36 z-10">
       <div
         class="w-full lg:h-full max-w-md md:max-w-sm md:px-0 md:w-96 mx-auto sm:px-4">
         <div class="flex flex-col">
           <div>
-            <h2 class="font-medium leading-tight text-black text-xl">
+            <h2
+              class="font-medium leading-tight text-black text-xl font-display">
               Sign up to AstroSaaS
             </h2><div class="py-3">
               <span class="w-full inline-flex relative mt-3 z-0"
@@ -66,16 +67,14 @@
               </div>
             </div>
           </div>
-        </div><form action="https://submit-form.com/r4PIGvAB">
+        </div>
+        <form action="https://submit-form.com/r4PIGvAB">
           <input name="hidden" autocomplete="false" style="display:none" />
           <input name="_redirect" type="hidden" value="#" /><div
             class="space-y-6">
             <div class="w-full flex flex-row gap-3">
               <div class="w-full">
-                <label
-                  class="font-medium text-sm block mb-3 text-gray-700"
-                  for="first_name">First name</label
-                >
+                <label class="sr-only" for="first_name">First name</label>
                 <input
                   class="w-full focus:outline-none border py-3 appearance-none bg-gray-50 block border-gray-200 focus:bg-white focus:border-accent-500 focus:ring-accent-500 placeholder-gray-400 px-3 rounded-xl sm:text-sm text-accent-500"
                   id="first_name"
@@ -84,10 +83,7 @@
                   required=""
                 />
               </div><div class="w-full">
-                <label
-                  class="font-medium text-sm block mb-3 text-gray-700"
-                  for="last_name">Last name</label
-                ><input
+                <label class="sr-only" for="last_name">Last name</label><input
                   class="w-full focus:outline-none border py-3 appearance-none bg-gray-50 block border-gray-200 focus:bg-white focus:border-accent-500 focus:ring-accent-500 placeholder-gray-400 px-3 rounded-xl sm:text-sm text-accent-500"
                   id="last_name"
                   name="last_name"
@@ -96,19 +92,15 @@
                 />
               </div>
             </div><div>
-              <label
-                class="font-medium text-sm block mb-3 text-gray-500"
-                name="name">User name or email Adress</label
+              <label class="sr-only" name="name"
+                >User name or email Adress</label
               >
               <input
                 class="w-full focus:outline-none border py-3 appearance-none bg-gray-50 block border-gray-200 focus:bg-white focus:border-accent-500 focus:ring-accent-500 placeholder-gray-400 px-3 rounded-xl sm:text-sm text-accent-500"
                 placeholder="Type here..."
               />
             </div><div class="col-span-full">
-              <label
-                class="font-medium text-sm block mb-3 text-gray-500"
-                name="company">Password</label
-              >
+              <label class="sr-only" name="company">Password</label>
               <input
                 class="w-full focus:outline-none border py-3 appearance-none bg-gray-50 block border-gray-200 focus:bg-white focus:border-accent-500 focus:ring-accent-500 placeholder-gray-400 px-3 rounded-xl sm:text-sm text-accent-500"
                 placeholder="Type password here..."
@@ -123,7 +115,7 @@
                   type="checkbox"
                 />
                 <label
-                  class="font-medium text-sm block leading-tight ml-2 text-black"
+                  class="font-medium text-xs block leading-tight ml-2 text-gray-500"
                   for="remember-me"
                   >Creating an account means you’re okay with our <a
                     class="text-accent-500 hover:text-accent-400"
@@ -150,7 +142,7 @@
                   class="text-accent-500 hover:text-accent-400 ml-3"
                   href="/login">Sign in</a
                 >
-              </p><p class="font-medium text-sm leading-tight text-black">
+              </p><p class="font-medium text-xs leading-tight text-gray-500">
                 This site is protected by reCAPTCHA and the Google Privacy
                 Policy and Terms of Service apply.
               </p>
