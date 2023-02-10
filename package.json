@@ -1,5 +1,5 @@
 {
-  "name": "@mikes/starter",
+  "name": "@lexington/starter",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -21,6 +21,11 @@
     "@astrojs/partytown": "^1.0.0",
     "@astrojs/sitemap": "^1.0.0",
     "@astrolib/seo": "^0.2.1",
-    "astro-compress": "^1.0.8"
+    "astro-compress": "^1.0.8",
+    "install": "^0.13.0",
+    "ncu": "^0.2.1",
+    "npm": "^9.4.1",
+    "npm-check-updates": "^16.6.3",
+    "tailwindcss": "^3.2.4"
   }
 }

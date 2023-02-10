@@ -90,22 +90,23 @@ module.exports = {
       }),
       colors: {
         black: "#141521",
+       
         accent: {
-          50: "#CDADFF",
-          100: "#C198FF",
-          200: "#A86FFF",
-          300: "#9047FF",
-          400: "#771EFF",
-          500: "#6100F4",
-          600: "#4B00BC",
-          700: "#340084",
-          800: "#1E004C",
-          900: "#080014",
+         50: "#EBEDFF",
+      100: "#D6DAFF",
+      200: "#A8B1FF",
+      300: "#808CFF",
+      400: "#5263FF",
+      500: "#283CFF",
+      600: "#0017EB",
+      700: "#0012B3",
+      800: "#000C75",
+      900: "#00063D"
         },
       },
       fontFamily: {
-        sans: ["Public Sans", ...defaultTheme.fontFamily.sans],
-        display: ["Neue Power", ...defaultTheme.fontFamily.sans],
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+
       },
     },
   },
