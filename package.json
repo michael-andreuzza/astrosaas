@@ -10,20 +10,11 @@
     "astro": "astro"
   },
   "devDependencies": {
-   
-    "@astrojs/tailwind": "^4.0.0",
-    "@tailwindcss/forms": "^0.5.4",
-    "@tailwindcss/typography": "^0.5.9",
-    "@types/alpinejs": "^3.7.2",
-    "astro": "^2.10.6"
-  },
-  "dependencies": {
-    "@astrojs/sitemap": "^2.0.1",
+    "@astrojs/sitemap": "^3.0.0",
+    "@astrojs/tailwind": "^5.0.0",
     "@astrolib/seo": "^0.6.0",
-    "install": "^0.13.0",
-    "ncu": "^0.2.1",
-    "npm": "^9.8.1",
-    "npm-check-updates": "^16.10.18",
-    "tailwindcss": "^3.3.3"
+    "@tailwindcss/forms": "^0.5.6",
+    "@tailwindcss/typography": "^0.5.9",
+    "astro": "^3.0.7"
   }
 }

@@ -85,12 +85,10 @@ module.exports = {
       ],
     },
     extend: {
-      backgroundImage: (theme) => ({
-        screens: "url('/path-to/image.png')",
-      }),
+
       colors: {
-        black: "#141521",
-       
+        black: "#121212",
+
         accent: {
          50: "#EBEDFF",
       100: "#D6DAFF",
