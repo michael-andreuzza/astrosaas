@@ -85,10 +85,8 @@ module.exports = {
       ],
     },
     extend: {
-
       colors: {
         black: "#121212",
-
         accent: {
          50: "#EBEDFF",
       100: "#D6DAFF",
@@ -104,7 +102,6 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
-
       },
     },
   },
