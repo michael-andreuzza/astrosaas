@@ -1,104 +1,339 @@
-<section aria-labelledby="faq-title" id="faq">
+<section>
   <div
-    class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-24 scroll-mt-12">
-    <div>
-      <div class="max-w-2xl">
-        <p
-          class="text-black font-extrabold lg:text-5xl text-4xl tracking-tight">
-          Frequent questions and answers
-        </p>
-        <p class="text-gray-500 lg:text-xl max-w-2xl mt-4 mx-auto text-base">
-          Because we wonder all day around
-        </p>
+    class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-24 scroll-mt-12"
+  >
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12">
+      <div class="text-center lg:text-left">
+        <div>
+          <p
+            class="text-3xl font-normal tracking-tight text-black font-display"
+          >
+            Frequently asked questions
+          </p>
+          <p class="text-base mt-4 text-zinc-500">
+            Answers to commonly asked questions about our platform
+          </p>
+        </div>
       </div>
-      <div class="mt-12 space-y-12 divide-y-2">
-        <div class="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-3 lg:pt-12">
-          <div class="flex flex-col flex-shrink-0 mb-6 lg:pr-12 md:mb-0">
-            <span
-              class="text-lg font-semibold leading-6 text-black font-display tracking-tight">
-              Lexingtøn Themes identified users on my account as unauthorized.
-              What should I do?
-            </span>
-          </div>
-          <div class="lg:col-span-2">
-            <p class="text-gray-500 text-sm">
-              If we got in touch with you about unauthorized charges and you
-              think we have made a mistake, we will gladly look into this for
-              you. We will have sent you a form that we need you to fill out in
-              order for Lexingtøn Themes to revisit your account. Please fill
-              out the verification form that was sent to you. Once you have
-              completed the verification, we will revisit your account and
-              follow up with you.
-            </p>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-3 lg:pt-12">
-          <div class="flex flex-col flex-shrink-0 mb-6 lg:pr-12 md:mb-0">
-            <span
-              class="text-lg font-semibold leading-6 text-black font-display tracking-tight">
-              I recently received a request for my photo ID. Why does Lexingtøn
-              Themes UI need this? What should I do next?
-            </span>
-          </div>
-          <div class="space-y-4 lg:col-span-2">
-            <p class="text-gray-500 text-sm">
-              Lexingtøn Themes is legally required to complete what is called a
-              KYC (Know Your Customer) Survey for every user that signs up,
-              which includes completing identity verification for the person who
-              chooses to be the owner, administrator, and representative of a
-              Lexingtøn Themes account. These requirements are intended to
-              promote transparency and prevent individuals from using complex
-              company structures to hide terrorist financing, money laundering,
-              tax evasion, and other financial crimes. Usually, we are able to
-              verify our users' identities automatically, but once in a while we
-              are unable to and have to reach out for more information.
-            </p>
-            <p class="text-gray-500 text-sm">
-              If you have not yet done so, visit the Verifications section of
-              your Dashboard to upload your photo ID in your dashboard.
-            </p>
+      <div
+        x-data="{
+  activeAccordion: '',
+  setActiveAccordion(id) {
+  this.activeAccordion = (this.activeAccordion == id) ? '' : id
+  }
+  }"
+        class="relative w-full mx-auto font-normal lg:col-span-2"
+      >
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+          class="cursor-pointer group text-black"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
+            <span>How does end-to-end encryption work?</span>
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500 -rotate-[45deg]"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div x-show="activeAccordion==id" x-collapse="">
+            <div class="p-4 pt-2 text-zinc-500">
+              End-to-end encryption ensures that only the sender and recipient
+              can access the content of a message. The information is encrypted
+              on the sender's device and can only be decrypted by the intended
+              recipient, preventing any intermediaries, including the platform
+              provider, from accessing the data.
+            </div>
           </div>
         </div>
-        <div class="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-3 lg:pt-12">
-          <div class="flex flex-col flex-shrink-0 mb-6 lg:pr-12 md:mb-0">
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
             <span
-              class="text-lg font-semibold leading-6 text-black font-display tracking-tight">
-              Why has Lexingtøn Themes placed a reserve on my new account?
-            </span>
-          </div>
-          <div class="lg:col-span-2">
-            <p class="text-gray-500 text-sm">
-              Reserves are utilized to keep processing volume available within
-              your Lexingtøn Themes account to fund refunds or chargebacks.
-              There are several possible reasons a reserve may be placed at
-              onboarding. It could be that your business operates in an industry
-              or with a business model that potentially creates additional
-              credit risk, even if you are not yet receiving chargebacks. Some
-              businesses may also collect payment far in advance, creating
-              additional risk. Most reserves are temporary, however, and we are
-              happy to revisit if you provide additional information by replying
-              to the notification email you received.
-            </p>
+              >Can I access my encrypted data if I forget my encryption key?</span
+            >
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div
+            x-show="activeAccordion==id"
+            x-collapse=""
+            style="display: none;"
+          >
+            <div class="p-4 pt-2 text-zinc-500">
+              No, forgetting or losing your encryption key means that your
+              encrypted data cannot be accessed. This is a crucial security
+              measure to ensure that even if someone gains unauthorized access
+              to your account, they won't be able to decrypt and view your
+              messages or files.
+            </div>
           </div>
         </div>
-        <div class="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-3 lg:pt-12">
-          <div class="flex flex-col flex-shrink-0 mb-6 lg:pr-12 md:mb-0">
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
             <span
-              class="text-lg font-semibold leading-6 text-black font-display tracking-tight">
-              I just opened a new account but Lexingtøn Themes told me I cannot
-              process payments yet.
-            </span>
+              >Are there any limitations to the self-destructing messages
+              feature?</span
+            >
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div
+            x-show="activeAccordion==id"
+            x-collapse=""
+            style="display: none;"
+          >
+            <div class="p-4 pt-2 text-zinc-500">
+              Self-destructing messages are designed to automatically delete
+              themselves after a specific period or upon being read by the
+              recipient. However, it's important to note that the feature only
+              removes the message from the devices involved in the conversation.
+              Recipients may take screenshots or use other means to capture the
+              content, which is beyond the platform's control.
+            </div>
           </div>
-          <div class="lg:col-span-2">
-            <p class="text-gray-500 text-sm">
-              We know how important it is to be able to accept transactions and
-              payouts quickly in order for a business to continue running
-              smoothly. Lexingtøn Themes is currently reviewing your submitted
-              details so that we have a full understanding of your business.
-              Unless we have requested more information, there is no action for
-              you to take, and we will do our best to wrap our routine review up
-              so you can get up and running.
-            </p>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
+            <span
+              >What happens if I enable two-factor authentication and lose my
+              device?</span
+            >
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div
+            x-show="activeAccordion==id"
+            x-collapse=""
+            style="display: none;"
+          >
+            <div class="p-4 pt-2 text-zinc-500">
+              Losing your device doesn't automatically compromise your account's
+              security. It's recommended to contact our support team as soon as
+              possible to disable the two-factor authentication on your lost
+              device and set up the authentication on your new device. This
+              process will help protect your account from unauthorized access
+              while ensuring you can regain access to it.
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
+            <span
+              >Is my personal information shared or sold to third parties?</span
+            >
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div
+            x-show="activeAccordion==id"
+            x-collapse=""
+            style="display: none;"
+          >
+            <div class="p-4 pt-2 text-zinc-500">
+              No, we strictly adhere to a privacy-centric approach. Your
+              personal information is never shared, sold, or monetized. We
+              prioritize your privacy and ensure that your data remains
+              confidential and only accessible to you.
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
+            <span>Can I use this platform on multiple devices?</span>
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div
+            x-show="activeAccordion==id"
+            x-collapse=""
+            style="display: none;"
+          >
+            <div class="p-4 pt-2 text-zinc-500">
+              Yes, you can access our platform on multiple devices. Your
+              encrypted data remains synced across all devices, allowing you to
+              seamlessly communicate and access your files and messages from
+              anywhere.
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
+            <span
+              >Are there any storage limitations for files and documents?</span
+            >
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div
+            x-show="activeAccordion==id"
+            x-collapse=""
+            style="display: none;"
+          >
+            <div class="p-4 pt-2 text-zinc-500">
+              Our platform provides ample storage space for your files and
+              documents. However, there may be storage limitations based on the
+              pricing plan you choose. We offer flexible plans to suit your
+              needs and provide options to upgrade if you require additional
+              storage capacity.
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
+            <span>Is it possible to export my data from the platform?</span>
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div
+            x-show="activeAccordion==id"
+            x-collapse=""
+            style="display: none;"
+          >
+            <div class="p-4 pt-2 text-zinc-500">
+              Yes, you can export your data from the platform. We offer export
+              features that allow you to download your messages, files, and
+              documents, ensuring you have a local copy for backup or migration
+              purposes. It provides you with greater control and flexibility
+              over your data.
+            </div>
           </div>
         </div>
       </div>
