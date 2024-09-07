@@ -1,9 +1,10 @@
 import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
+import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
-
-  
+vite: {
+    plugins: [tailwindcss()],
+  },
    site: 'https://lexingtonthemes.com',
-  integrations: [tailwind(),  sitemap()]
+  integrations: [sitemap()]
 });
