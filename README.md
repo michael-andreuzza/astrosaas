@@ -11,6 +11,8 @@ Checkout [Lexington Themes](https://lexingtonthemes.com/) for free and premium m
 For freelancers, developers, businesses, and personal use.
 Beautifully crafted with Astro.js, and Tailwind CSS — Simple & easy to customise.
 
+## Before using this template publicly, please ensure you remove my name and any links associated with me from the website.
+
 ## This template is using Tailwind CSS V4
 
 Now we are using only a CSS file. It's called `global.css` and it's located in the src/styles folder. Now we are eimporting Tailwind CSS on the same file instead of using the `tailwind.config.cjs` file. Like this:
