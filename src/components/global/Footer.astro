@@ -1,155 +1,114 @@
+---
+const sections = [
+  {
+    title: "All pages",
+    links: [
+      { name: "Home", href: "/" },
+      { name: "FAQ", href: "/faq" },
+      { name: "Terms", href: "/terms" },
+      { name: "Privacy", href: "/privacy" },
+      { name: "Sign up", href: "/signup" },
+      { name: "Sign In", href: "/signup" },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      {
+        name: "GitHub repo",
+        href: "https://github.com/michael-andreuzza/astrosaas",
+      },
+    ],
+  },
+  {
+    title: "More themes",
+    links: [
+      {
+        name: "Lexington Themes",
+        href: "https://lexingtonthemes.com/",
+      },
+    ],
+  },
+  {
+    title: "Socials",
+    links: [
+      {
+        name: "@lexingtonthemes",
+        href: "https://x.com/lexingtonthemes",
+      },
+      {
+        name: "@Mike_Andreuzza",
+        href: "https://x.com/Mike_Andreuzza",
+      },
+    ],
+  },
+];
+---
+
 <footer>
-  <div
-    class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-24">
+  <div class="px-8 py-20 mx-auto md:px-12 lg:px-24 max-w-7xl">
     <div class="grid grid-cols-2 lg:grid-cols-4 items-start gap-x-8 gap-y-24">
       <a
         href="/"
-        class="xl:col-span-1 text-black inline-flex items-center gap-3">
+        class="xl:col-span-1 text-black inline-flex items-center gap-3"
+      >
         <svg
           class="h-4"
           viewBox="0 0 78 32"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg">
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
             d="M55.5 0H77.5L58.5 32H36.5L55.5 0Z"
             class="ccustom"
-            fill="#283CFF"
-          ></path>
+            fill="#283CFF"></path>
           <path
             d="M35.5 0H51.5L32.5 32H16.5L35.5 0Z"
             class="ccompli1"
-            fill="#5263FF"
-          ></path>
+            fill="#5263FF"></path>
           <path
             d="M19.5 0H31.5L12.5 32H0.5L19.5 0Z"
             class="ccompli2"
-            fill="#808CFF"
-          ></path>
+            fill="#808CFF"></path>
         </svg>
         <span class="font-bold font-display">AstroSaas</span>
       </a>
       <div
-        class="md:grid md:grid-cols-2 xl:grid-cols-4 md:gap-8 text-sm text-gray-400 lg:col-span-3">
-        <div>
-          <h3 class="text-lg text-black font-medium tracking-tight">
-            All pages
-          </h3>
-          <ul
-            role="list"
-            class="mt-4 space-y-1">
-            <li>
-              <a
-                href="/"
-                class="hover:text-black">
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="/faq"
-                class="hover:text-black">
-                FAQ
-              </a>
-            </li>
-            <li>
-              <a
-                href="/terms"
-                class="hover:text-black">
-                Terms
-              </a>
-            </li>
-            <li>
-              <a
-                href="/privacy"
-                class="hover:text-black">
-                Privacy
-              </a>
-            </li>
-            <li>
-              <a
-                href="/signup"
-                class="hover:text-black">
-                Sign up
-              </a>
-            </li>
-            <li>
-              <a
-                href="/signup"
-                class="hover:text-black">
-                Sign In
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="mt-12 md:mt-0">
-          <h3 class="text-lg text-black font-medium tracking-tight">
-            Resources
-          </h3>
-          <ul
-            role="list"
-            class="mt-4 space-y-1">
-            <li>
-              <a
-                href="https://github.com/michael-andreuzza/astrosaas"
-                class="hover:text-black">
-                GitHub repo
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="text-lg text-black font-medium tracking-tight">
-            More themes
-          </h3>
-          <ul
-            role="list"
-            class="mt-4 space-y-1">
-            <li>
-              <a
-                href="https://lexingtonthemes.com/"
-                class="hover:text-black">
-                Lexington Themes
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="mt-12 md:mt-0">
-          <h3 class="text-lg text-black font-medium tracking-tight">Socials</h3>
-          <ul
-            role="list"
-            class="mt-4 space-y-1">
-            <li>
-              <a
-                href="https://x.com/lexingtonthemes"
-                class="hover:text-black">
-                @lexingtonthemes
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://x.com/Mike_Andreuzza"
-                class="hover:text-black">
-                @Mike_Andreuzza
-              </a>
-            </li>
-          </ul>
-        </div>
+        class="md:grid md:grid-cols-2 xl:grid-cols-4 md:gap-8 text-sm leading-normal text-base-500 font-medium lg:col-span-3"
+      >
+        {
+          sections.map(({ title, links }) => (
+            <div class="mt-12 md:mt-0">
+              <h3 class="text-lg text-black font-medium tracking-tight">
+                {title}
+              </h3>
+              <ul role="list" class="mt-4 space-y-1">
+                {links.map(({ name, href }) => (
+                  <li>
+                    <a href={href} class="hover:text-black">
+                      {name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
       </div>
     </div>
   </div>
 </footer>
 <footer class="bg-white">
   <div
-    class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-6">
-    <div class="border-t pt-6 border-gray-200">
-      <p class="text-sm text-neutral-600 lg:col-span-2">
+    class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-6"
+  >
+    <div class="border-t pt-6 border-base-200">
+      <p class="text-xs text-base-500 lg:col-span-2">
         © 2024 Lexington Themes. All rights reserved. Lexington Themes is not
         affiliated with Astro or Tailwind Labs team, nor is it endorsed by or
         sponsored by this ones. A side project by <a
           class="text-sm text-black hover:text-accent-400 underline"
-          href="https://michaelandreuzza.com/"
-          >Michael Andreuzza</a
+          href="https://michaelandreuzza.com/">Michael Andreuzza</a
         > This website was built with Astro &amp; Tailwind. Crafted in Åland Islands,
         Finland.
       </p>

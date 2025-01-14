@@ -2,20 +2,41 @@
   <div class="w-full mx-auto md:px-12 px-8 max-w-7xl lg:px-16">
     <div
       x-data="{ open: false }"
-      class="relative flex flex-col w-full py-5 mx-auto bg-white md:items-center md:justify-between md:flex-row md:px-6">
+      class="relative flex flex-col w-full py-5 mx-auto bg-white md:items-center md:justify-between md:flex-row md:px-6"
+    >
       <div class="flex flex-row items-center justify-between lg:justify-start">
-        <a href="/" class=" text-black inline-flex items-center gap-3">
-         <svg class="h-4" viewBox="0 0 78 32" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M55.5 0H77.5L58.5 32H36.5L55.5 0Z" class="ccustom" fill="#283CFF"></path> <path d="M35.5 0H51.5L32.5 32H16.5L35.5 0Z" class="ccompli1" fill="#5263FF"></path> <path d="M19.5 0H31.5L12.5 32H0.5L19.5 0Z" class="ccompli2" fill="#808CFF"></path> </svg>
+        <a href="/" class="text-black inline-flex items-center gap-3">
+          <svg
+            class="h-4"
+            viewBox="0 0 78 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M55.5 0H77.5L58.5 32H36.5L55.5 0Z"
+              class="ccustom"
+              fill="#283CFF"></path>
+            <path
+              d="M35.5 0H51.5L32.5 32H16.5L35.5 0Z"
+              class="ccompli1"
+              fill="#5263FF"></path>
+            <path
+              d="M19.5 0H31.5L12.5 32H0.5L19.5 0Z"
+              class="ccompli2"
+              fill="#808CFF"></path>
+          </svg>
           <span class="font-bold font-display">AstroSaas</span>
         </a>
         <button
           @click="open = !open"
-          class="inline-flex items-center justify-center p-2 text-gray-400 hover:text-black focus:outline-none focus:text-black md:hidden">
+          class="inline-flex items-center justify-center p-2 text-base-400 hover:text-black focus:outline-none focus:text-black md:hidden"
+        >
           <svg
             class="w-6 h-6"
             stroke="currentColor"
             fill="none"
-            viewBox="0 0 24 24">
+            viewBox="0 0 24 24"
+          >
             <path
               :class="{'hidden': open, 'inline-flex': !open }"
               class="inline-flex"
@@ -35,31 +56,35 @@
       </div>
       <nav
         :class="{'flex': open, 'hidden': !open}"
-        class="flex-col items-center flex-grow hidden md:pb-0 md:flex md:justify-end md:flex-row">
+        class="flex-col items-center flex-grow hidden md:pb-0 md:flex md:justify-end md:flex-row"
+      >
         <a
-          class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-400 lg:ml-auto"
+          class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-600 lg:ml-auto"
           href="/#features">Features</a
         >
         <a
-          class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-400"
+          class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-600"
           href="/#pricing">Pricing</a
         >
 
         <a
-          class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-400"
-          href="/faq">
+          class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-600"
+          href="/faq"
+        >
           Faq</a
         >
 
         <div class="inline-flex items-center gap-2 list-none lg:ml-auto">
           <a
             href="/signup"
-            class="block px-4 py-2 mt-2 text-sm font-medium text-black md:mt-0 hover:text-accent-400 focus:outline-none focus:shadow-outline">
+            class="flex items-center justify-center transition-all duration-200 focus:ring-2 focus:outline-none text-base-500 bg-white hover:text-accent-500 ring-1 ring-base-200 focus:ring-accent-500 h-8 px-4 py-2 text-xs font-medium rounded-md"
+          >
             Sign up
           </a>
           <a
             href="/login"
-            class="inline-flex items-center h-8 justify-center px-4 py-2 text-sm font-medium text-black bg-gray-100 rounded-lg group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-gray-50 active:bg-gray-200 active:text-accent-400 focus-visible:outline-black">
+            class="flex items-center justify-center transition-all duration-200 ring-1 focus:ring-2 ring-base-100 focus:outline-none text-base-700 bg-base-50 hover:bg-white focus:ring-base-500/50 h-8 px-4 py-2 text-xs font-medium rounded-md"
+          >
             Log in
           </a>
         </div>

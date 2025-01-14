@@ -1,306 +1,578 @@
-<section aria-labelledby="pricing-section" id="pricing">
-  <div class="lg:px-16 max-w-7xl md:px-12 mx-auto px-8 py-24 scroll-mt-12">
-    <div class="text-center max-w-3xl mx-auto">
+<section x-data="{duration: 'monthly'}">
+  <div
+    class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-24"
+  >
+    <div class="max-w-xl text-center mx-auto">
+      <p class="text-sm leading-normal font-bold uppercase text-accent-600">
+        Tagline
+      </p>
       <h2
-        class="text-4xl tracking-tight font-medium text-black md:text-5xl font-display"
+        class="text-xl leading-tight tracking-tight sm:text-2xl md:text-3xl lg:text-4xl mt-4 font-semibold text-base-900 lg:text-balance"
       >
-        Always know what you’ll pay, transparent pricing for everyone.
+        Equip your business with world class software
       </h2>
-    </div>
-
-    <div
-      class="grid max-w-2xl grid-cols-1 py-4 mt-24 -mx-4 xl:-mx-12 sm:grid-cols-2 gap-y-10 sm:mx-auto lg:max-w-none lg:grid-cols-4 xl:gap-x-2 "
-    >
-      <section class="flex flex-col px-6 rounded-3xl lg:py-8 bg-gray-50">
-        <h3 class="mt-5 text-lg text-black font-display">Greedy</h3>
-        <p class="mt-2 text-sm text-gray-500">
-          Amazing for those attached to money with glue
-        </p>
-        <p
-          class="order-first text-5xl font-light tracking-tight text-black font-display"
-        >
-          $0
-        </p>
-        <ul
-          role="list"
-          class="flex flex-col order-last mt-10 text-sm text-gray-600 gap-y-3"
-        >
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4"
-              >Connect 1 websites</span
-            >
-          </li>
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4">
-              1 bank accounts</span
-            >
-          </li>
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4"
-              >Track up to 1 credit cards</span
-            >
-          </li>
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4"
-              >Analytics support</span
-            >
-          </li>
-        </ul>
-        <a
-          class="inline-flex items-center justify-center w-full px-6 py-3 h-12 mt-8 text-center text-black transition duration-200 ease-in-out transform bg-white border hover:bg-gray-200 hover:border-gray-200 rounded-xl focus:outline-none border-gray-200"
-          aria-label="Wannabe tier"
-          href="/register">Get started</a
-        >
-      </section>
-      <section class="flex flex-col px-6 rounded-3xl lg:py-8 bg-gray-50">
-        <h3 class="mt-5 text-lg text-black font-display">Wannabe</h3>
-        <p class="mt-2 text-sm text-gray-500">
-          Good for those trying to get there, but are too far from it.
-        </p>
-        <p
-          class="order-first text-5xl font-light tracking-tight text-black font-display"
-        >
-          $2
-        </p>
-        <ul
-          role="list"
-          class="flex flex-col order-last mt-10 text-sm text-gray-600 gap-y-3"
-        >
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4"
-              >Connect 1 websites</span
-            >
-          </li>
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4">
-              2 bank accounts</span
-            >
-          </li>
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4"
-              >Track up to 15 credit cards</span
-            >
-          </li>
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4"
-              >Analytics support</span
-            >
-          </li>
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4">
-              3 months data</span
-            >
-          </li>
-        </ul>
-        <a
-          class="inline-flex items-center justify-center w-full px-6 py-3 h-12 mt-8 text-center text-black transition duration-200 ease-in-out transform bg-white border hover:bg-gray-200 hover:border-gray-200 rounded-xl focus:outline-none border-gray-200"
-          aria-label="Wannabe tier"
-          href="/register">Get started</a
-        >
-      </section>
-      <section
-        class="flex flex-col order-first px-6 py-8 rounded-3xl sm:px-8 bg-black  lg:order-none"
+      <p
+        class="text-base leading-normal mt-4 text-base-500 font-medium lg:text-balance"
       >
-        <h3 class="mt-5 text-lg text-white font-display">Indie Hacker</h3>
-        <p class="mt-2 text-sm text-accent-100">
-          Perfect for those leaving 9-5 and working 24/7.
-        </p>
-        <p
-          class="order-first text-5xl font-light tracking-tight text-white font-display"
+        Choose a plan that works the best for you and your team. Start small,
+        upgrade when you need to.
+      </p>
+      <div
+        aria-labelledby="pricing-toggle"
+        class="w-full relative mt-8 ring-1 ring-base-200 ring-offset-2 bg-white overflow-hidden justify-center gap-4 mx-auto lg:mx-0 inline-flex p-1 rounded-md max-w-52 shadow z-0"
+      >
+        <!-- Monthly Pricing Button: Sets 'duration' to 'monthly' when clicked -->
+        <!-- Sliding background -->
+        <div
+          class="absolute inset-0 bg-base-50 rounded-md transition-transform duration-200 ease-in-out"
+          :class="duration === 'monthly' ? 'w-1/2 translate-x-0' : 'w-1/2 translate-x-full'"
         >
-          $29
-        </p>
-        <ul
-          role="list"
-          class="flex flex-col order-last mt-10 text-sm text-white gap-y-3"
+        </div>
+        <!-- Monthly Pricing Button -->
+        <button
+          id="monthly-pricing-button"
+          class="relative flex items-center justify-center w-full px-2 h-6 text-xs font-medium focus:outline-none transition-colors duration-300 z-10"
+          :class="duration === 'monthly' ? 'text-accent-600' : 'text-base-500 hover:text-accent-500'"
+          @click="duration = 'monthly'"
+          type="button"
+          :aria-pressed="duration === 'monthly'"
         >
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4"
-              >Connect 80 websites</span
-            >
-          </li>
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4">
-              5 bank accounts</span
-            >
-          </li>
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4"
-              >Track up to 50 credit cards</span
-            >
-          </li>
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4"
-              >Analytics support</span
-            >
-          </li>
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4">
-              12 months data</span
-            >
-          </li>
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4"
-              >Cloud service 24/7</span
-            >
-          </li>
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4"
-              >Track in multiple users</span
-            >
-          </li>
-        </ul>
-        <a
-          class="inline-flex items-center justify-center w-full px-6 py-3 h-12 mt-8 text-center text-black transition duration-200 ease-in-out transform bg-white border-2 border-white hover:bg-transparent hover:border-white rounded-xl hover:text-white focus:outline-none"
-          aria-label="Indie hacker tier"
-          href="/register">Get started</a
+          Monthly
+        </button>
+        <!-- Annual Pricing Button -->
+        <button
+          id="annual-pricing-button"
+          class="relative flex items-center justify-center w-full px-2 h-6 text-xs font-medium focus:outline-none transition-colors duration-300 z-10"
+          :class="duration === 'annual' ? 'text-accent-600' : 'text-base-500 hover:text-accent-500'"
+          @click="duration = 'annual'"
+          type="button"
+          :aria-pressed="duration === 'annual'"
         >
-      </section>
-      <section class="flex flex-col px-6 rounded-3xl lg:py-8 bg-gray-50">
-        <h3 class="mt-5 text-lg text-black font-display">Big fish</h3>
-        <p class="mt-2 text-sm text-gray-500">
-          For even the biggest enterprise companies.
-        </p>
-        <p
-          class="order-first text-5xl font-light tracking-tight text-black font-display"
-        >
-          $99
-        </p>
-        <ul
-          role="list"
-          class="flex flex-col order-last mt-10 text-sm text-gray-600 gap-y-3"
-        >
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4"
-              >Connect unlimited websites</span
-            >
-          </li>
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4">
-              15 bank accounts</span
-            >
-          </li>
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4"
-              >Track up to 200 credit cards</span
-            >
-          </li>
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4"
-              >Analytics support</span
-            >
-          </li>
-          <li class="flex items-center">
-            <ion-icon
-              class="w-4 h-4 md hydrated"
-              name="checkmark-outline"
-              role="img"
-              aria-label="checkmark outline"></ion-icon><span class="ml-4">
-              24 months data</span
-            >
-          </li>
-        </ul>
-        <a
-          class="inline-flex items-center justify-center w-full px-6 py-3 h-12 mt-8 text-center text-black transition duration-200 ease-in-out transform bg-white border hover:bg-gray-200 hover:border-gray-200 rounded-xl focus:outline-none border-gray-200"
-          aria-label="Big fish tier"
-          href="/register">Get started</a
-        >
-      </section>
+          Annual
+        </button>
+      </div>
     </div>
-    <div class="mx-auto pt-12 lg:py-16">
-      <div class="grid grid-cols-2 gap-0.5 lg:mt-8 md:grid-cols-6 mt-6">
-        <div class="flex justify-center col-span-1 px-8">
-          <img alt="logo"  src="/Figma.svg" />
-        </div><div class="flex justify-center col-span-1 px-8">
-          <img alt="logo"  src="/Canva.svg" />
-        </div><div class="flex justify-center col-span-1 px-8">
-          <img alt="logo"  src="/Stripe.svg" />
-        </div><div class="flex justify-center col-span-1 px-8">
-          <img alt="logo"  src="/Gitlab.svg" />
-        </div><div class="flex justify-center col-span-1 px-8">
-          <img alt="logo"  src="/Linear.svg" />
-        </div><div class="flex justify-center col-span-1 px-8">
-          <img alt="logo"  src="/Gumroad.svg" />
+    <div
+      class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 mt-12 mx-auto"
+    >
+      <!-- Tier one -->
+      <div
+        class="flex flex-col h-full p-1 lg:py-1 rounded-3xl bg-base-50 ring-4 ring-base-50 border border-base-200"
+      >
+        <div>
+          <div
+            class="flex flex-col gap-4 p-8 bg-white rounded-[1.3rem] h-full "
+          >
+            <div class="flex items-start justify-between w-full">
+              <div>
+                <h3
+                  class="text-lg leading-normal sm:text-xl md:text-2xl font-medium text-base-900"
+                >
+                  Core
+                </h3>
+                <p class="text-base leading-normal font-medium text-base-500">
+                  For individuals
+                </p>
+              </div>
+            </div>
+            <p class="text-base leading-normal font-medium text-base-500">
+              This subscription tier caters to individuals and hobbyists seeking
+              features.
+            </p>
+          </div>
+        </div>
+        <div class="p-8">
+          <p
+            class="font-semibold flex lg:text-3xl items-baseline text-2xl tracking-tighter text-base-900"
+          >
+            <span
+              data-monthly="$29.00"
+              data-annual="$19.00"
+              x-text="$el.dataset[duration]"></span>
+            <span
+              class="text-sm font-normal font-sans tracking-normal text-base-500"
+            >
+              <span x-show="duration === 'monthly'">/month</span>
+              <span x-show="duration === 'annual'" style="display: none"
+                >/annually</span
+              >
+            </span>
+          </p>
+          <div class="w-full mt-4">
+            <button
+              class="flex items-center justify-center transition-all duration-200 focus:ring-2 focus:outline-none text-base-500 bg-white hover:text-accent-500 ring-1 ring-base-200 focus:ring-accent-500 h-9 px-4 py-2 text-sm font-medium rounded-md w-full"
+            >
+              Get Started
+            </button>
+          </div>
+          <div class="mt-8">
+            <p
+              class="text-sm leading-normal font-medium uppercase text-base-500"
+            >
+              Core plan includes:
+            </p>
+            <ul class="flex flex-col mt-4 gap-y-3 text-base-500" role="list">
+              <li class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+                <span class="text-base leading-normal">
+                  Unlimited members
+                </span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+                <span class="text-base leading-normal"> 1 Team </span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+                <span class="text-base leading-normal"> 50 issues </span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+                <span class="text-base leading-normal">
+                  Slack, GitHub, and API access
+                </span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+                <span class="text-base leading-normal">
+                  Basic reporting tools
+                </span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+                <span class="text-base leading-normal">
+                  Community support
+                </span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+                <span class="text-base leading-normal">
+                  Basic customization options
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Tier two -->
+      <div
+        class="flex flex-col h-full p-1 lg:py-1 rounded-3xl bg-base-950 ring-4 ring-base-50 border border-base-200"
+      >
+        <div>
+          <div
+            class="flex flex-col gap-4 p-8 bg-white/10 rounded-[1.3rem] h-full "
+          >
+            <div class="flex items-start justify-between w-full">
+              <div>
+                <h3
+                  class="text-lg leading-normal sm:text-xl md:text-2xl font-medium text-white"
+                >
+                  Momentum
+                </h3>
+                <p class="text-base leading-normal font-medium text-base-200">
+                  For startups
+                </p>
+              </div>
+              <span
+                class="inline-flex items-center font-medium relative text-base-700 bg-base-50 px-2.5 py-1 text-xs rounded-md"
+              >
+                Popular
+              </span>
+            </div>
+            <p class="text-base leading-normal font-medium text-base-200">
+              Tailored for expanding businesses, this tier offers advanced tools
+              and analytics.
+            </p>
+          </div>
+        </div>
+        <div class="p-8">
+          <p
+            class="font-semibold flex lg:text-3xl items-baseline text-2xl tracking-tighter text-white"
+          >
+            <span
+              data-monthly="$49.00"
+              data-annual="$39.00"
+              x-text="$el.dataset[duration]"></span>
+            <span
+              class="text-sm font-normal font-sans tracking-normal text-white/50"
+            >
+              <span x-show="duration === 'monthly'">/month</span>
+              <span x-show="duration === 'annual'" style="display: none"
+                >/annually</span
+              >
+            </span>
+          </p>
+          <div class="w-full mt-4">
+            <button
+              class="flex items-center justify-center transition-all duration-200 focus:ring-2 focus:outline-none text-base-500 bg-white hover:text-accent-500 ring-1 ring-base-200 focus:ring-accent-500 h-9 px-4 py-2 text-sm font-medium rounded-md w-full"
+            >
+              Get Started
+            </button>
+          </div>
+          <div class="mt-8">
+            <p
+              class="text-sm leading-normal font-medium uppercase text-base-200"
+            >
+              Momentum plan includes:
+            </p>
+            <ul class="flex flex-col mt-4 gap-y-3 text-base-200" role="list">
+              <li class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+                <span class="text-base leading-normal"> Unlimited teams </span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+                <span class="text-base leading-normal">
+                  Private teams and guests
+                </span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+                <span class="text-base leading-normal"> Insights </span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+                <span class="text-base leading-normal">
+                  Custom branding options
+                </span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+                <span class="text-base leading-normal">
+                  Collaboration tools
+                </span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+                <span class="text-base leading-normal">
+                  Mobile app access
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Tier three -->
+      <div
+        class="flex flex-col h-full p-1 lg:py-1 rounded-3xl bg-accent-700 ring-4 ring-base-50 border border-base-200"
+      >
+        <div>
+          <div
+            class="flex flex-col gap-4 p-8 bg-white/10 rounded-[1.3rem] h-full "
+          >
+            <div class="flex items-start justify-between w-full">
+              <div>
+                <h3
+                  class="text-lg leading-normal sm:text-xl md:text-2xl font-medium text-white"
+                >
+                  Growth
+                </h3>
+                <p class="text-base leading-normal font-medium text-base-200">
+                  For corporates
+                </p>
+              </div>
+            </div>
+            <p class="text-base leading-normal font-medium text-base-200">
+              Designed for established businesses, providing comprehensive
+              tools.
+            </p>
+          </div>
+        </div>
+        <div class="p-8">
+          <p
+            class="font-semibold flex lg:text-3xl items-baseline text-2xl tracking-tighter text-white"
+          >
+            <span
+              data-monthly="$99.00"
+              data-annual="$79.00"
+              x-text="$el.dataset[duration]"></span>
+            <span
+              class="text-sm font-normal font-sans tracking-normal text-accent-100"
+            >
+              <span x-show="duration === 'monthly'">/month</span>
+              <span x-show="duration === 'annual'" style="display: none"
+                >/annually</span
+              >
+            </span>
+          </p>
+          <div class="w-full mt-4">
+            <button
+              class="flex items-center justify-center transition-all duration-200 focus:ring-2 focus:outline-none text-base-500 bg-white hover:text-accent-500 ring-1 ring-base-200 focus:ring-accent-500 h-9 px-4 py-2 text-sm font-medium rounded-md w-full"
+            >
+              Get Started
+            </button>
+          </div>
+          <div class="mt-8">
+            <p
+              class="text-sm leading-normal font-medium uppercase text-base-200"
+            >
+              Growth plan includes:
+            </p>
+            <ul class="flex flex-col mt-4 gap-y-3 text-base-200" role="list">
+              <li class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+                <span class="text-base leading-normal">
+                  Unlimited members
+                </span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+                <span class="text-base leading-normal">
+                  Advanced analytics
+                </span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+                <span class="text-base leading-normal"> Priority support </span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+                <span class="text-base leading-normal">
+                  Custom API integration
+                </span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+                <span class="text-base leading-normal">
+                  Unlimited storage
+                </span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+                <span class="text-base leading-normal">
+                  Enhanced security
+                </span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
