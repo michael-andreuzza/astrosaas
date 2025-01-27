@@ -5,8 +5,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  // add yur domain name here
   site: "https://askreviews.ai",
-  base: "/askreviews-static",
   integrations: [sitemap()],
 });
