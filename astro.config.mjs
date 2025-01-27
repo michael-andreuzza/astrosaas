@@ -7,6 +7,6 @@ export default defineConfig({
   },
   // add yur domain name here
   site: "https://askreviews.ai",
-  base: "/",
+  base: "/askreviews-static",
   integrations: [sitemap()],
 });
