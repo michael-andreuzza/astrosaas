@@ -6,26 +6,12 @@
     >
       <div class="flex flex-row items-center justify-between lg:justify-start">
         <a href="/" class="text-black inline-flex items-center gap-3">
-          <svg
-            class="h-4"
-            viewBox="0 0 78 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M55.5 0H77.5L58.5 32H36.5L55.5 0Z"
-              class="ccustom"
-              fill="#283CFF"></path>
-            <path
-              d="M35.5 0H51.5L32.5 32H16.5L35.5 0Z"
-              class="ccompli1"
-              fill="#5263FF"></path>
-            <path
-              d="M19.5 0H31.5L12.5 32H0.5L19.5 0Z"
-              class="ccompli2"
-              fill="#808CFF"></path>
-          </svg>
-          <span class="font-bold font-display">AstroSaas</span>
+          <img
+            src="/images/logo.png"
+            alt="AskReviews.ai Logo"
+            class="h-8 w-auto"
+          />
+          <span class="font-bold font-display">AskReviews.ai</span>
         </a>
         <button
           @click="open = !open"
@@ -59,33 +45,24 @@
         class="flex-col items-center flex-grow gap-3 hidden md:pb-0 md:flex md:justify-end md:flex-row"
       >
         <a
-          class=" text-sm font-medium text-black hover:text-accent-600 lg:ml-auto"
+          class="text-sm font-medium text-black hover:text-accent-600 lg:ml-auto"
           href="/#features">Features</a
         >
         <a
-          class=" text-sm font-medium text-black hover:text-accent-600"
+          class="text-sm font-medium text-black hover:text-accent-600"
           href="/#pricing">Pricing</a
         >
-
         <a
-          class=" text-sm font-medium text-black hover:text-accent-600"
-          href="/faq"
-        >
-          Faq</a
+          class="text-sm font-medium text-black hover:text-accent-600"
+          href="/faq">Faq</a
         >
 
         <div class="inline-flex items-center gap-2 list-none lg:ml-auto">
           <a
-            href="/signup"
-            class="flex items-center justify-center transition-all duration-200 focus:ring-2 focus:outline-none text-base-500 bg-white hover:text-accent-500 ring-1 ring-base-200 focus:ring-accent-500 h-8 px-4 py-2 text-xs font-medium rounded-md"
+            href="https://app.askreviews.ai"
+            class="flex items-center justify-center transition-all duration-200 focus:ring-2 focus:outline-none text-white bg-accent-600 hover:bg-accent-700 focus:ring-accent-500/50 h-9 px-6 py-2 text-sm font-medium rounded-md"
           >
-            Sign up
-          </a>
-          <a
-            href="/login"
-            class="flex items-center justify-center transition-all duration-200 ring-1 focus:ring-2 ring-base-100 focus:outline-none text-base-700 bg-base-50 hover:bg-white focus:ring-base-500/50 h-8 px-4 py-2 text-xs font-medium rounded-md"
-          >
-            Log in
+            Go to App
           </a>
         </div>
       </nav>

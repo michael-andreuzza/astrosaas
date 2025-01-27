@@ -7,31 +7,31 @@
   --font-display: "InterVariable", sans-serif;
   --color-black: #121212;
   /* Accent  */
---color-accent-25: #f5fbff;
---color-accent-50: #ebf7ff;
---color-accent-100: #d2edff;
---color-accent-200: #afdfff;
---color-accent-300: #78ceff;
---color-accent-400: #38b1ff;
---color-accent-500: #0b8aff;
---color-accent-600: #0065ff;
---color-accent-700: #004cff;
---color-accent-800: #003dd4;
---color-accent-900: #02379e;
---color-accent-950: #072364;
-/* Base */
---color-base-25: #fafafa;
---color-base-50: #f9fafb;
---color-base-100: #f3f4f6;
---color-base-200: #e5e7eb;
---color-base-300: #d1d5db;
---color-base-400: #9ca3af;
---color-base-500: #6b7280;
---color-base-600: #4b5563;
---color-base-700: #374151;
---color-base-800: #1f2937;
---color-base-900: #111827;
---color-base-950: #030712;
+  --color-accent-25: #f5fbff;
+  --color-accent-50: #ebf7ff;
+  --color-accent-100: #d2edff;
+  --color-accent-200: #afdfff;
+  --color-accent-300: #78ceff;
+  --color-accent-400: #38b1ff;
+  --color-accent-500: #0b8aff;
+  --color-accent-600: #0065ff;
+  --color-accent-700: #004cff;
+  --color-accent-800: #003dd4;
+  --color-accent-900: #02379e;
+  --color-accent-950: #072364;
+  /* Base */
+  --color-base-25: #fafafa;
+  --color-base-50: #f9fafb;
+  --color-base-100: #f3f4f6;
+  --color-base-200: #e5e7eb;
+  --color-base-300: #d1d5db;
+  --color-base-400: #9ca3af;
+  --color-base-500: #6b7280;
+  --color-base-600: #4b5563;
+  --color-base-700: #374151;
+  --color-base-800: #1f2937;
+  --color-base-900: #111827;
+  --color-base-950: #030712;
 }
 /* CSS */
 :root {

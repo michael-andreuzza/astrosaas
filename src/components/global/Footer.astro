@@ -1,45 +1,35 @@
 ---
 const sections = [
   {
-    title: "All pages",
+    title: "Product",
     links: [
-      { name: "Home", href: "/" },
+      { name: "Features", href: "/#features" },
+      { name: "Pricing", href: "/#pricing" },
       { name: "FAQ", href: "/faq" },
-      { name: "Terms", href: "/terms" },
-      { name: "Privacy", href: "/privacy" },
-      { name: "Sign up", href: "/signup" },
-      { name: "Sign In", href: "/signup" },
+      { name: "Go to App", href: "https://app.askreviews.ai" },
     ],
   },
   {
     title: "Resources",
     links: [
-      {
-        name: "GitHub repo",
-        href: "https://github.com/michael-andreuzza/astrosaas",
-      },
+      { name: "Documentation", href: "/docs" },
+      { name: "API Reference", href: "/api" },
+      { name: "Integration Guide", href: "/integration" },
     ],
   },
   {
-    title: "More themes",
+    title: "Legal",
     links: [
-      {
-        name: "Lexington Themes",
-        href: "https://lexingtonthemes.com/",
-      },
+      { name: "Privacy Policy", href: "/privacy" },
+      { name: "Terms of Service", href: "/terms" },
     ],
   },
   {
-    title: "Socials",
+    title: "Company",
     links: [
-      {
-        name: "@lexingtonthemes",
-        href: "https://x.com/lexingtonthemes",
-      },
-      {
-        name: "@Mike_Andreuzza",
-        href: "https://x.com/Mike_Andreuzza",
-      },
+      { name: "About Us", href: "/about" },
+      { name: "Contact", href: "/contact" },
+      { name: "Blog", href: "/blog" },
     ],
   },
 ];
@@ -52,26 +42,12 @@ const sections = [
         href="/"
         class="xl:col-span-1 text-black inline-flex items-center gap-3"
       >
-        <svg
-          class="h-4"
-          viewBox="0 0 78 32"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M55.5 0H77.5L58.5 32H36.5L55.5 0Z"
-            class="ccustom"
-            fill="#283CFF"></path>
-          <path
-            d="M35.5 0H51.5L32.5 32H16.5L35.5 0Z"
-            class="ccompli1"
-            fill="#5263FF"></path>
-          <path
-            d="M19.5 0H31.5L12.5 32H0.5L19.5 0Z"
-            class="ccompli2"
-            fill="#808CFF"></path>
-        </svg>
-        <span class="font-bold font-display">AstroSaas</span>
+        <img
+          src="/images/logo.png"
+          alt="AskReviews.ai Logo"
+          class="h-8 w-auto"
+        />
+        <span class="font-bold font-display">AskReviews.ai</span>
       </a>
       <div
         class="md:grid md:grid-cols-2 xl:grid-cols-4 md:gap-8 text-sm leading-normal text-base-500 font-medium lg:col-span-3"
@@ -104,13 +80,7 @@ const sections = [
   >
     <div class="border-t pt-6 border-base-200">
       <p class="text-xs text-base-500 lg:col-span-2">
-        © 2024 Lexington Themes. All rights reserved. Lexington Themes is not
-        affiliated with Astro or Tailwind Labs team, nor is it endorsed by or
-        sponsored by this ones. A side project by <a
-          class="text-sm text-black hover:text-accent-400 underline"
-          href="https://michaelandreuzza.com/">Michael Andreuzza</a
-        > This website was built with Astro &amp; Tailwind. Crafted in Åland Islands,
-        Finland.
+        © {new Date().getFullYear()} AskReviews.ai. All rights reserved.
       </p>
     </div>
   </div>
