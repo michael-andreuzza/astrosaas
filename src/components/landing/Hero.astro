@@ -1,24 +1,30 @@
 ---
+import { MessageSquare, BarChart2, Code } from "lucide-react";
+
 const featuresList = [
   {
-    title: "Question Limits",
+    title: "Product Expert",
     description:
-      "Choose from 10k, 50k, or 100k questions per month based on your needs.",
+      "Add an AI chatbot to every product page that answers customer questions instantly.",
+    icon: MessageSquare,
   },
   {
     title: "Analytics Dashboard",
     description:
-      "Track usage and gain insights with our Pro and Business plans.",
+      "Gain product insights from customer questions and make data-driven A/B testing decisions.",
+    icon: BarChart2,
   },
   {
     title: "Website Integration",
-    description: "Easy setup for your website with our simple integration.",
+    description:
+      "Easy setup that automatically learns from your product descriptions and reviews.",
+    icon: Code,
   },
 ];
 ---
 
 <section class="overflow-hidden">
-  <div class="px-8 pt-32 mx-auto md:px-12 lg:px-24 max-w-7xl relative">
+  <div class="px-8 pt-16 mx-auto md:px-12 lg:px-24 max-w-7xl relative">
     <div class="max-w-2xl text-center mx-auto lg:text-balance">
       <p class="text-sm leading-normal font-bold uppercase text-accent-600">
         ECOMMERCE CUSTOMER INTELLIGENCE
@@ -33,7 +39,7 @@ const featuresList = [
         knows your products inside and out.
       </p>
       <div
-        class="flex flex-wrap items-center gap-2 justify-center mx-auto mt-12"
+        class="flex flex-wrap items-center gap-2 justify-center mx-auto mt-8"
       >
         <a
           href="#pricing"
@@ -50,12 +56,14 @@ const featuresList = [
       </div>
     </div>
     <dl
-      class="lg:gap-x-8 lg:grid-cols-3 max-w-4xl mt-8 mx-auto sm:gap-x-6 sm:gap-y-12 sm:grid sm:grid-cols-2 sm:space-y-0 space-y-6 text-center text-sm items-start"
+      class="lg:gap-x-8 lg:grid-cols-3 max-w-4xl mt-16 mx-auto sm:gap-x-6 sm:gap-y-12 sm:grid sm:grid-cols-2 sm:space-y-0 space-y-6 text-center text-sm items-start"
     >
       {
-        featuresList.map(({ title, description }) => (
-          <div class="text-base-500 lg:text-balance">
-            <strong class="text-base-700">{title}</strong> ━ {description}
+        featuresList.map(({ title, description, icon: Icon }) => (
+          <div class="text-base-500 lg:text-balance flex flex-col items-center">
+            <Icon className="w-6 h-6 mb-2 text-accent-600" />
+            <strong class="text-base-700 mb-1">{title}</strong>
+            {description}
           </div>
         ))
       }
