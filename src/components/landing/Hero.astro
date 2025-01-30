@@ -5,7 +5,7 @@ const featuresList = [
   {
     title: "Product Expert",
     description:
-      "Add an AI chatbot to every product page that answers customer questions instantly.",
+      "Add an AI assistant to every product page that answers customer questions instantly.",
     icon: MessageSquare,
   },
   {
@@ -24,22 +24,28 @@ const featuresList = [
 ---
 
 <section class="overflow-hidden">
-  <div class="px-8 pt-16 mx-auto md:px-12 lg:px-24 max-w-7xl relative">
-    <div class="max-w-2xl text-center mx-auto lg:text-balance">
-      <p class="text-sm leading-normal font-bold uppercase text-accent-600">
+  <div class="px-8 pt-24 pb-16 mx-auto md:px-12 lg:px-32 max-w-7xl relative">
+    <div class="max-w-3xl text-center mx-auto lg:text-balance">
+      {
+        /* <p class="text-base leading-normal font-bold uppercase text-accent-600">
         ECOMMERCE CUSTOMER INTELLIGENCE
-      </p>
+      </p> */
+      }
       <h2
-        class="text-xl leading-tight tracking-tight sm:text-2xl md:text-3xl lg:text-4xl mt-4 font-semibold text-base-900"
+        class="text-2xl leading-tight tracking-tight sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-4 font-semibold text-base-900"
       >
-        Add an AI Chatbot to Every Product Page
+        Add an <span class="text-accent-600">AI Assistant</span> to Every <span
+          class="text-accent-600">Product Page</span
+        >
       </h2>
-      <p class="text-base leading-normal mt-4 text-base-500 font-medium">
-        Help customers make confident buying decisions with an AI chatbot that
+      <p
+        class="text-lg sm:text-xl leading-relaxed mt-8 text-base-500 font-medium max-w-2xl mx-auto"
+      >
+        Help customers make confident buying decisions with an AI assistant that
         knows your products inside and out.
       </p>
       <div
-        class="flex flex-wrap items-center gap-2 justify-center mx-auto mt-8"
+        class="flex flex-wrap items-center gap-3 justify-center mx-auto mt-12"
       >
         <a
           href="#pricing"
@@ -56,7 +62,7 @@ const featuresList = [
       </div>
     </div>
     <dl
-      class="lg:gap-x-8 lg:grid-cols-3 max-w-4xl mt-16 mx-auto sm:gap-x-6 sm:gap-y-12 sm:grid sm:grid-cols-2 sm:space-y-0 space-y-6 text-center text-sm items-start"
+      class="lg:gap-x-8 lg:grid-cols-3 max-w-4xl mt-24 mx-auto sm:gap-x-6 sm:gap-y-12 sm:grid sm:grid-cols-2 sm:space-y-0 space-y-6 text-center text-sm items-start"
     >
       {
         featuresList.map(({ title, description, icon: Icon }) => (
