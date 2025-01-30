@@ -5,6 +5,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: "https://askreviews.ai",
+  site: "https://productgenie.io",
   integrations: [sitemap()],
 });
