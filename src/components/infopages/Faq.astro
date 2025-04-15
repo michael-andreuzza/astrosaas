@@ -29,6 +29,40 @@
             @click="setActiveAccordion(id)"
             class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
           >
+            <span>Who is this for?</span>
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div x-show="activeAccordion==id" x-collapse="">
+            <div class="p-4 pt-2 text-zinc-500">
+              <em>ProductGenie</em> is for ecommerce businesses and online store
+              owners of all sizes looking to add an affordable and easy-to-integrate
+              AI shopping assistant chatbot to their online store. It enhances customer
+              service, improves product discovery, and provides advanced customer
+              insights by delivering instant answers directly on your product pages.
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
             <span>How does it work?</span>
             <svg
               class="size-5 duration-300 ease-out text-accent-500 -rotate-[45deg]"
@@ -46,11 +80,10 @@
           </button>
           <div x-show="activeAccordion==id" x-collapse="">
             <div class="p-4 pt-2 text-zinc-500">
-              ProductGenie adds an AI shopping assistant to your product pages
-              (similar to Amazon's Rufus chatbot). It learns your product
-              descriptions and reviews to instantly answer customer questions,
-              helping them make confident purchase decisions and boosting your
-              sales.
+              <em>ProductGenie</em> adds an AI shopping assistant to your product
+              pages (similar to Amazon's Rufus chatbot). It learns your product descriptions
+              and reviews to instantly answer customer questions, helping them make
+              confident purchase decisions and boosting your sales.
             </div>
           </div>
         </div>
@@ -123,10 +156,10 @@
             style="display: none;"
           >
             <div class="p-4 pt-2 text-zinc-500">
-              We prioritize your privacy. ProductGenie only collects publicly
-              available information from your website, such as product page
-              titles, descriptions, and reviews, to train the AI. We never share
-              this data with third parties.
+              We prioritize your privacy. <em>ProductGenie</em> only collects publicly
+              available information from your website, such as product page titles,
+              descriptions, and reviews, to train the AI. We never share this data
+              with third parties.
             </div>
           </div>
         </div>
@@ -165,7 +198,8 @@
                 href="https://app.productgenie.io"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-accent-600 hover:underline">ProductGenie web app</a
+                class="text-accent-600 hover:underline"
+                ><em>ProductGenie</em> web app</a
               > to gain valuable insights.
             </div>
           </div>
@@ -204,6 +238,44 @@
               Advanced customization options, allowing you to fine-tune
               responses and knowledge, are planned for a future release. Stay
               tuned for updates!
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
+            <span>Will it say bad things about my products?</span>
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div
+            x-show="activeAccordion==id"
+            x-collapse=""
+            style="display: none;"
+          >
+            <div class="p-4 pt-2 text-zinc-500">
+              <em>ProductGenie</em> learns from your product descriptions and reviews
+              to answer questions accurately. While it uses this existing information
+              (including reviews), it's designed to be as helpful and positive as
+              possible when interacting with customers and representing your products
+              and brand.
             </div>
           </div>
         </div>
