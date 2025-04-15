@@ -2,7 +2,6 @@
   <div class="px-8 py-32 mx-auto md:px-12 lg:px-24 max-w-7xl">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12">
       <div class="text-center lg:text-left">
-       
         <p
           class="text-xl leading-tight tracking-tight sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-base-900 lg:text-balance"
         >
@@ -30,7 +29,7 @@
             @click="setActiveAccordion(id)"
             class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
           >
-            <span>How does end-to-end encryption work?</span>
+            <span>How does it work?</span>
             <svg
               class="size-5 duration-300 ease-out text-accent-500 -rotate-[45deg]"
               :class="{ '-rotate-[45deg]': activeAccordion==id }"
@@ -47,11 +46,11 @@
           </button>
           <div x-show="activeAccordion==id" x-collapse="">
             <div class="p-4 pt-2 text-zinc-500">
-              End-to-end encryption ensures that only the sender and recipient
-              can access the content of a message. The information is encrypted
-              on the sender's device and can only be decrypted by the intended
-              recipient, preventing any intermediaries, including the platform
-              provider, from accessing the data.
+              ProductGenie adds an AI shopping assistant to your product pages
+              (similar to Amazon's Rufus chatbot). It learns your product
+              descriptions and reviews to instantly answer customer questions,
+              helping them make confident purchase decisions and boosting your
+              sales.
             </div>
           </div>
         </div>
@@ -64,9 +63,7 @@
             @click="setActiveAccordion(id)"
             class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
           >
-            <span
-              >Can I access my encrypted data if I forget my encryption key?</span
-            >
+            <span>How do I set it up?</span>
             <svg
               class="w-5 h-5 duration-300 ease-out text-accent-500"
               :class="{ '-rotate-[45deg]': activeAccordion==id }"
@@ -87,11 +84,12 @@
             style="display: none;"
           >
             <div class="p-4 pt-2 text-zinc-500">
-              No, forgetting or losing your encryption key means that your
-              encrypted data cannot be accessed. This is a crucial security
-              measure to ensure that even if someone gains unauthorized access
-              to your account, they won't be able to decrypt and view your
-              messages or files.
+              Setup is quick and easy. You can use our WordPress plugin for
+              seamless integration, or manually add a small code snippet to your
+              website. Check out our <a
+                href="/docs/setup"
+                class="text-accent-600 hover:underline">setup documentation</a
+              > for detailed instructions.
             </div>
           </div>
         </div>
@@ -104,10 +102,7 @@
             @click="setActiveAccordion(id)"
             class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
           >
-            <span
-              >Are there any limitations to the self-destructing messages
-              feature?</span
-            >
+            <span>What are privacy considerations?</span>
             <svg
               class="w-5 h-5 duration-300 ease-out text-accent-500"
               :class="{ '-rotate-[45deg]': activeAccordion==id }"
@@ -128,12 +123,10 @@
             style="display: none;"
           >
             <div class="p-4 pt-2 text-zinc-500">
-              Self-destructing messages are designed to automatically delete
-              themselves after a specific period or upon being read by the
-              recipient. However, it's important to note that the feature only
-              removes the message from the devices involved in the conversation.
-              Recipients may take screenshots or use other means to capture the
-              content, which is beyond the platform's control.
+              We prioritize your privacy. ProductGenie only collects publicly
+              available information from your website, such as product page
+              titles, descriptions, and reviews, to train the AI. We never share
+              this data with third parties.
             </div>
           </div>
         </div>
@@ -146,10 +139,7 @@
             @click="setActiveAccordion(id)"
             class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
           >
-            <span
-              >What happens if I enable two-factor authentication and lose my
-              device?</span
-            >
+            <span>How do I see what my customers are asking?</span>
             <svg
               class="w-5 h-5 duration-300 ease-out text-accent-500"
               :class="{ '-rotate-[45deg]': activeAccordion==id }"
@@ -170,12 +160,13 @@
             style="display: none;"
           >
             <div class="p-4 pt-2 text-zinc-500">
-              Losing your device doesn't automatically compromise your account's
-              security. It's recommended to contact our support team as soon as
-              possible to disable the two-factor authentication on your lost
-              device and set up the authentication on your new device. This
-              process will help protect your account from unauthorized access
-              while ensuring you can regain access to it.
+              You can track all customer questions and interactions through our
+              analytics dashboard. Log in to the <a
+                href="https://app.productgenie.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-accent-600 hover:underline">ProductGenie web app</a
+              > to gain valuable insights.
             </div>
           </div>
         </div>
@@ -188,9 +179,7 @@
             @click="setActiveAccordion(id)"
             class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
           >
-            <span
-              >Is my personal information shared or sold to third parties?</span
-            >
+            <span>Can I customize the AI myself?</span>
             <svg
               class="w-5 h-5 duration-300 ease-out text-accent-500"
               :class="{ '-rotate-[45deg]': activeAccordion==id }"
@@ -211,125 +200,10 @@
             style="display: none;"
           >
             <div class="p-4 pt-2 text-zinc-500">
-              No, we strictly adhere to a privacy-centric approach. Your
-              personal information is never shared, sold, or monetized. We
-              prioritize your privacy and ensure that your data remains
-              confidential and only accessible to you.
-            </div>
-          </div>
-        </div>
-        <div
-          x-data="{ id: $id('accordion') }"
-          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
-          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
-        >
-          <button
-            @click="setActiveAccordion(id)"
-            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
-          >
-            <span>Can I use this platform on multiple devices?</span>
-            <svg
-              class="w-5 h-5 duration-300 ease-out text-accent-500"
-              :class="{ '-rotate-[45deg]': activeAccordion==id }"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              ><path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 6v12m6-6H6"></path></svg
-            >
-          </button>
-          <div
-            x-show="activeAccordion==id"
-            x-collapse=""
-            style="display: none;"
-          >
-            <div class="p-4 pt-2 text-zinc-500">
-              Yes, you can access our platform on multiple devices. Your
-              encrypted data remains synced across all devices, allowing you to
-              seamlessly communicate and access your files and messages from
-              anywhere.
-            </div>
-          </div>
-        </div>
-        <div
-          x-data="{ id: $id('accordion') }"
-          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
-          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
-        >
-          <button
-            @click="setActiveAccordion(id)"
-            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
-          >
-            <span
-              >Are there any storage limitations for files and documents?</span
-            >
-            <svg
-              class="w-5 h-5 duration-300 ease-out text-accent-500"
-              :class="{ '-rotate-[45deg]': activeAccordion==id }"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              ><path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 6v12m6-6H6"></path></svg
-            >
-          </button>
-          <div
-            x-show="activeAccordion==id"
-            x-collapse=""
-            style="display: none;"
-          >
-            <div class="p-4 pt-2 text-zinc-500">
-              Our platform provides ample storage space for your files and
-              documents. However, there may be storage limitations based on the
-              pricing plan you choose. We offer flexible plans to suit your
-              needs and provide options to upgrade if you require additional
-              storage capacity.
-            </div>
-          </div>
-        </div>
-        <div
-          x-data="{ id: $id('accordion') }"
-          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
-          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
-        >
-          <button
-            @click="setActiveAccordion(id)"
-            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
-          >
-            <span>Is it possible to export my data from the platform?</span>
-            <svg
-              class="w-5 h-5 duration-300 ease-out text-accent-500"
-              :class="{ '-rotate-[45deg]': activeAccordion==id }"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              ><path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 6v12m6-6H6"></path></svg
-            >
-          </button>
-          <div
-            x-show="activeAccordion==id"
-            x-collapse=""
-            style="display: none;"
-          >
-            <div class="p-4 pt-2 text-zinc-500">
-              Yes, you can export your data from the platform. We offer export
-              features that allow you to download your messages, files, and
-              documents, ensuring you have a local copy for backup or migration
-              purposes. It provides you with greater control and flexibility
-              over your data.
+              Currently, the AI learns automatically from your product data.
+              Advanced customization options, allowing you to fine-tune
+              responses and knowledge, are planned for a future release. Stay
+              tuned for updates!
             </div>
           </div>
         </div>

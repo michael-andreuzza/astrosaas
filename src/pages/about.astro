@@ -1,0 +1,39 @@
+---
+// src/pages/about.astro
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <section class="relative overflow-hidden bg-base-50/50 py-12">
+    <div
+      class="absolute inset-0 bg-[radial-gradient(40%_128px_at_50%_0%,theme(backgroundColor.accent.100/50%)_0%,transparent_100%)] -z-10"
+    >
+    </div>
+    <div class="px-8 mx-auto md:px-12 lg:px-24 max-w-7xl">
+      <h1 class="text-4xl font-semibold tracking-tight text-center text-black">
+        About Us
+      </h1>
+      <p class="mt-4 text-lg text-center text-gray-600">
+        Learn more about the team behind ProductGenie and our mission.
+      </p>
+      <div class="mt-12 prose prose-lg mx-auto">
+        <p>
+          ProductGenie was founded by a team of passionate AI developers with a
+          shared vision for transforming the ecommerce landscape.
+        </p>
+        <p>
+          Our team brings together diverse expertise from working extensively in
+          ecommerce, web development, AI, cloud infrastructure, and
+          cybersecurity. This unique blend of skills allows us to build robust,
+          secure, and user-friendly solutions tailored for online businesses.
+        </p>
+        <p>
+          With a strong background in artificial intelligence, we are dedicated
+          to leveraging cutting-edge technology to create tools like
+          ProductGenie that empower businesses and enhance the online shopping
+          experience for everyone.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
