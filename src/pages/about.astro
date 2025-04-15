@@ -10,18 +10,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     >
     </div>
     <div class="px-8 mx-auto md:px-12 lg:px-24 max-w-7xl">
-      <h1
-        class="text-4xl font-semibold tracking-tight text-center text-black underline"
-      >
-        About Us
-      </h1>
+      <div class="text-center">
+        <h1
+          class="gradient-underline text-4xl font-semibold tracking-tight text-black inline-block"
+        >
+          About Us
+        </h1>
+      </div>
       <p class="mt-4 text-lg text-center text-gray-600">
         Learn more about the team behind ProductGenie and our mission.
       </p>
       <div class="mt-12 prose prose-lg mx-auto">
         <p>
-          ProductGenie was founded by a team of passionate AI developers with a
-          shared vision for transforming the ecommerce landscape.
+          <em>ProductGenie</em> was founded by a team of passionate AI developers
+          with a shared vision for transforming the ecommerce landscape.
         </p>
         <p>
           Our team brings together diverse expertise from working extensively in
@@ -32,10 +34,27 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <p>
           With a strong background in artificial intelligence, we are dedicated
           to leveraging cutting-edge technology to create tools like
-          ProductGenie that empower businesses and enhance the online shopping
+          <em>ProductGenie</em> that empower businesses and enhance the online shopping
           experience for everyone.
         </p>
       </div>
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  /* Style for the gradient underline */
+  .gradient-underline::after {
+    content: "";
+    display: block;
+    width: 70%; /* Adjust width of the underline */
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      currentColor,
+      transparent
+    );
+    margin: 0.25rem auto 0; /* Adjust spacing (top margin) and center */
+  }
+</style>
