@@ -24,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
+        env:
+          PUBLIC_RECAPTCHA_SITE_KEY: ${{ secrets.PUBLIC_RECAPTCHA_SITE_KEY }}
+          PUBLIC_CONTACT_API_ENDPOINT: ${{ secrets.PUBLIC_CONTACT_API_ENDPOINT }}
         run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

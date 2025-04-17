@@ -29,10 +29,27 @@ This project is automatically deployed to GitHub Pages using GitHub Actions. The
 3. Deploys content to GitHub Pages
 4. Provides deployment URL in job output
 
-## Configuration Files
+## Environment Variables
+
+The contact form requires specific environment variables to function correctly:
+
+- `PUBLIC_RECAPTCHA_SITE_KEY`: Your Google reCAPTCHA site key.
+- `PUBLIC_CONTACT_API_ENDPOINT`: The URL of your backend API endpoint for handling contact form submissions.
+
+Since the `.env` file containing these variables is not committed to the repository, you must configure them as **GitHub Secrets** for the deployment workflow to access them during the build process.
+
+### Setting up GitHub Secrets
+
+1.  Go to your GitHub repository settings.
+2.  Navigate to **Secrets and variables** > **Actions**.
+3.  Click **New repository secret**.
+4.  Create two secrets:
+    *   Name: `PUBLIC_RECAPTCHA_SITE_KEY`, Value: `<your_recaptcha_site_key>`
+    *   Name: `PUBLIC_CONTACT_API_ENDPOINT`, Value: `<your_api_endpoint_url>`
+
+The deployment workflow (`.github/workflows/deploy.yml`) is configured to automatically use these secrets during the `npm run build` step.
 
 ## Configuration Files
-
 
 ### astro.config.mjs Configuration Fields
 
