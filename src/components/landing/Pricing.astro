@@ -1,4 +1,4 @@
-<section id="pricing" x-data="{duration: 'monthly'}">
+<section id="pricing">
   <div
     class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-24"
   >
@@ -17,40 +17,6 @@
         Choose a plan that works the best for you and your team. Start small,
         upgrade when you need to.
       </p>
-      <div
-        aria-labelledby="pricing-toggle"
-        class="w-full relative mt-8 ring-1 ring-base-200 ring-offset-2 bg-white overflow-hidden justify-center gap-4 mx-auto lg:mx-0 inline-flex p-1 rounded-md max-w-52 shadow z-0"
-      >
-        <!-- Monthly Pricing Button: Sets 'duration' to 'monthly' when clicked -->
-        <!-- Sliding background -->
-        <div
-          class="absolute inset-0 bg-base-50 rounded-md transition-transform duration-200 ease-in-out"
-          :class="duration === 'monthly' ? 'w-1/2 translate-x-0' : 'w-1/2 translate-x-full'"
-        >
-        </div>
-        <!-- Monthly Pricing Button -->
-        <button
-          id="monthly-pricing-button"
-          class="relative flex items-center justify-center w-full px-2 h-6 text-xs font-medium focus:outline-none transition-colors duration-300 z-10"
-          :class="duration === 'monthly' ? 'text-accent-600' : 'text-base-500 hover:text-accent-500'"
-          @click="duration = 'monthly'"
-          type="button"
-          :aria-pressed="duration === 'monthly'"
-        >
-          Monthly
-        </button>
-        <!-- Annual Pricing Button -->
-        <button
-          id="annual-pricing-button"
-          class="relative flex items-center justify-center w-full px-2 h-6 text-xs font-medium focus:outline-none transition-colors duration-300 z-10"
-          :class="duration === 'annual' ? 'text-accent-600' : 'text-base-500 hover:text-accent-500'"
-          @click="duration = 'annual'"
-          type="button"
-          :aria-pressed="duration === 'annual'"
-        >
-          Annual
-        </button>
-      </div>
     </div>
     <div
       class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 mt-12 mx-auto"
@@ -60,9 +26,7 @@
         class="flex flex-col h-full p-1 lg:py-1 rounded-3xl bg-base-50 ring-4 ring-base-50 border border-base-200"
       >
         <div>
-          <div
-            class="flex flex-col gap-4 p-8 bg-white rounded-[1.3rem] h-full "
-          >
+          <div class="flex flex-col gap-4 p-8 bg-white rounded-[1.3rem] h-full">
             <div class="flex items-start justify-between w-full">
               <div>
                 <h3
@@ -82,10 +46,7 @@
             <span
               class="text-sm font-normal font-sans tracking-normal text-base-500"
             >
-              <span x-show="duration === 'monthly'">/month</span>
-              <span x-show="duration === 'annual'" style="display: none"
-                >/annually</span
-              >
+              /month
             </span>
           </p>
           <div class="w-full mt-4">
@@ -116,7 +77,9 @@
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M5 12l5 5l10 -10"></path>
                 </svg>
-                <span class="text-base leading-normal">10,000 questions/month (1 website)</span>
+                <span class="text-base leading-normal"
+                  >10,000 questions/month (1 website)</span
+                >
               </li>
             </ul>
           </div>
@@ -128,7 +91,7 @@
       >
         <div>
           <div
-            class="flex flex-col gap-4 p-8 bg-white/10 rounded-[1.3rem] h-full "
+            class="flex flex-col gap-4 p-8 bg-white/10 rounded-[1.3rem] h-full"
           >
             <div class="flex items-start justify-between w-full">
               <div>
@@ -145,17 +108,11 @@
           <p
             class="font-semibold flex lg:text-3xl items-baseline text-2xl tracking-tighter text-white"
           >
-            <span
-              data-monthly="$100.00"
-              data-annual="$80.00"
-              x-text="$el.dataset[duration]"></span>
+            <span>$100</span>
             <span
               class="text-sm font-normal font-sans tracking-normal text-white/50"
             >
-              <span x-show="duration === 'monthly'">/month</span>
-              <span x-show="duration === 'annual'" style="display: none"
-                >/annually</span
-              >
+              /month
             </span>
           </p>
           <div class="w-full mt-4">
@@ -186,7 +143,9 @@
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M5 12l5 5l10 -10"></path>
                 </svg>
-                <span class="text-base leading-normal">50,000 questions/month (1 website)</span>
+                <span class="text-base leading-normal"
+                  >50,000 questions/month (1 website)</span
+                >
               </li>
               <li class="flex items-center gap-2">
                 <svg
@@ -202,7 +161,8 @@
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M5 12l5 5l10 -10"></path>
                 </svg>
-                <span class="text-base leading-normal">Analytics Dashboard</span>
+                <span class="text-base leading-normal">Analytics Dashboard</span
+                >
               </li>
             </ul>
           </div>
@@ -214,7 +174,7 @@
       >
         <div>
           <div
-            class="flex flex-col gap-4 p-8 bg-white/10 rounded-[1.3rem] h-full "
+            class="flex flex-col gap-4 p-8 bg-white/10 rounded-[1.3rem] h-full"
           >
             <div class="flex items-start justify-between w-full">
               <div>
@@ -231,17 +191,11 @@
           <p
             class="font-semibold flex lg:text-3xl items-baseline text-2xl tracking-tighter text-white"
           >
-            <span
-              data-monthly="$250.00"
-              data-annual="$220.00"
-              x-text="$el.dataset[duration]"></span>
+            <span>$250</span>
             <span
               class="text-sm font-normal font-sans tracking-normal text-accent-100"
             >
-              <span x-show="duration === 'monthly'">/month</span>
-              <span x-show="duration === 'annual'" style="display: none"
-                >/annually</span
-              >
+              /month
             </span>
           </p>
           <div class="w-full mt-4">
@@ -272,7 +226,9 @@
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M5 12l5 5l10 -10"></path>
                 </svg>
-                <span class="text-base leading-normal">100,000 questions/month (1 website)</span>
+                <span class="text-base leading-normal"
+                  >100,000 questions/month (1 website)</span
+                >
               </li>
               <li class="flex items-center gap-2">
                 <svg
@@ -288,7 +244,8 @@
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M5 12l5 5l10 -10"></path>
                 </svg>
-                <span class="text-base leading-normal">Analytics Dashboard</span>
+                <span class="text-base leading-normal">Analytics Dashboard</span
+                >
               </li>
             </ul>
           </div>
