@@ -5,12 +5,16 @@
       class="relative flex flex-col w-full py-3 mx-auto bg-white md:items-center md:justify-between md:flex-row md:px-6"
     >
       <div class="flex flex-row items-center justify-between lg:justify-start">
-        <a href="/" class="text-black inline-flex items-center gap-3">
+        <a href="/" class="text-black inline-flex items-center gap-1">
           <img
-            src="/images/product-genie-logo.png"
+            src="/images/magic_lamp.svg"
             alt="ProductGenie Logo"
-            class="h-12 w-auto"
+            class="h-15 w-auto"
           />
+          <div class="flex flex-col leading-none">
+            <span class="text-black text-xl font-medium">Product</span>
+            <span class="text-[#9d74ed] text-xl font-medium -mt-2">Genie</span>
+          </div>
         </a>
         <button
           @click="open = !open"
