@@ -10,17 +10,17 @@ const ads = [
     title: "Lexington Themes",
     event: "lexingtonAdd",
     href: "https://lexingtonthemes.com/",
-    imgSrc: "https://www.colorsandfonts.com/images/lexington.png",
+    imgSrc: "https://lexingtonthemes.com/OpenGraph/twitter.png",
     description:
-      "The biggest Astro collection with 43 premium themes. Clean code. Modern design. Easy to customize. Production-ready. Trusted by 8,000+ freelancers, startups, and agencies — Awarded by Astro.",
+      "Launch faster with premium Astro V7 & Tailwind CSS, Sanity CMS and EmDash CMS themes",
   },
   {
-    title: "Oxbow UI",
-    event: "oxbowAdd",
-    href: "https://oxbowui.com/",
-    imgSrc: "https://www.colorsandfonts.com/images/oxbow.png",
+    title: "Kobbe",
+    event: "kobbeAdd",
+    href: "https://kobbe.io/",
+    imgSrc: "https://kobbe.io/images/opengraph/facebook.png",
     description:
-      "Oxbow UI is Open Source.427 Tailwind CSS & Alpine JS blocks — MIT-licensed and production-ready. Copy paste, fork it, remix it, ship it,enjoy it, share it.",
+      "Privacy-first web analytics with traffic and revenue in one place.",
   },
 ];
 ---
@@ -37,33 +37,11 @@ const ads = [
                 alt={ad.description}
                 width={400}
                 height={240}
-                class="block w-full h-full  cursor-pointer overflow-hidden  object-cover  aspect-[16/8] object-top"
+                class="block w-full h-full  cursor-pointer overflow-hidden  object-cover  aspect-16/8 object-top"
                 src={ad.imgSrc}
                 style={{ color: "transparent" }}
               />
-              <div class="p-8 bg-white border-b border-base-200 order-first h-full flex flex-col justify-between gap-8">
-                <div>
-                  <Text
-                    tag="h3"
-                    variant="textLG"
-                    class="font-medium text-base-900"
-                  >
-                    {ad.title}
-                  </Text>
-                  <Text tag="p" variant="textBase" class="text-base-500 mt-1">
-                    {ad.description}
-                  </Text>
-                </div>
-                <Button
-                  isLink
-                  size="sm"
-                  variant="default"
-                  href={ad.href}
-                  class="w-fit"
-                >
-                  Visit {ad.title}
-                </Button>
-              </div>
+            
             </div>
           </div>
         ))
