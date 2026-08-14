@@ -1,84 +1,156 @@
 ---
-// Fundations
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Text from "@/components/fundations/elements/Text.astro";
+import AuthPageShell from "@/components/auth/AuthPageShell.astro";
 import Button from "@/components/fundations/elements/Button.astro";
-import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import GoogleLogo from "@/components/auth/GoogleLogo.astro";
+
+const inputClass =
+  "box-border flex h-9 min-h-9 w-full min-w-0 rounded-md border border-input bg-transparent px-3 text-sm leading-tight text-foreground outline-none transition-all placeholder:text-muted-foreground focus-visible:border-brand/40 focus-visible:ring-3 focus-visible:ring-brand/10 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50";
 ---
 
-<BaseLayout>
-  <section>
-    <Wrapper variant="standard" class="py-20">
-      <div class="max-w-sm mx-auto">
-      
-        <Text
-          tag="h1"
-          variant="displaySM"
-          class="tracking-tight font-semibold text-base-900"
-        >
-          Sign in to your account
-        </Text>
-        <Text
-          tag="p"
-          variant="textBase"
-          class="mt-4 text-base-500 font-medium text-balance"
-        >
-          Welcome back! Please enter your details to sign in.
-        </Text>
-        <form action="#" method="POST" class="mx-auto mt-12 max-w-sm">
-          <div class="flex flex-col gap-y-6">
-            <div>
-              <label class="text-sm text-base-500 font-medium"> Email </label>
-              <div class="mt-2.5">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  autocomplete="email"
-                  required
-                  aria-required="true"
-                  aria-describedby="email-error"
-                  class="block w-full h-10 px-4 py-2 text-sm text-accent-700 duration-300 bg-white border border-transparent rounded-lg appearance-none ring-1 ring-base-200 placeholder-base-400 focus:border-base-300 focus:bg-transparent focus:outline-none focus:ring-accent-700 focus:ring-offset-2 focus:ring-2 sm:text-sm"
-                />
-                <span id="email-error" class="text-red-600 text-sm hidden">
-                  Please enter a valid email address.
-                </span>
-              </div>
-            </div>
-            <div>
-              <label class="text-sm text-base-500 font-medium">
-                Password
-              </label>
-              <div class="mt-2.5">
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  autocomplete="current-password"
-                  required
-                  aria-required="true"
-                  aria-describedby="password-error"
-                  class="block w-full h-10 px-4 py-2 text-sm text-accent-700 duration-300 bg-white border border-transparent rounded-lg appearance-none ring-1 ring-base-200 placeholder-base-400 focus:border-base-300 focus:bg-transparent focus:outline-none focus:ring-accent-700 focus:ring-offset-2 focus:ring-2 sm:text-sm"
-                />
-                <span id="password-error" class="text-red-600 text-sm hidden">
-                  Please enter your password.
-                </span>
-              </div>
-            </div>
-          </div>
-          <Button variant="default" size="base" class="mt-8 w-full">
-            Sign in
-          </Button>
-          <div class="flex items-center mt-4">
-            <Text tag="p" variant="textSM" class="text-base-500">
-              Don't have an account?
-              <a class="text-accent-700 hover:text-base-500" href="/signup">
-                Sign up
-              </a>
-            </Text>
-          </div>
-        </form>
+<BaseLayout hideNavigation hideFooter>
+  <AuthPageShell
+    title="Sign in to your account"
+    subtitle="Welcome back. Continue to your AstroSaas workspace."
+  >
+    <div class="space-y-4">
+      <Button variant="muted" isLink href="#" class="w-full">
+        <GoogleLogo slot="left-icon" />
+        Sign in with Google
+      </Button>
+
+      <div class="relative flex items-center gap-3">
+        <div class="bg-border h-px flex-1"></div>
+        <span class="text-muted-foreground text-xs uppercase">or</span>
+        <div class="bg-border h-px flex-1"></div>
       </div>
-    </Wrapper>
-  </section>
+    </div>
+
+    <form action="#" method="POST" class="mt-4 space-y-4">
+      <div class="space-y-2">
+        <label for="email" class="sr-only">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          autocomplete="email"
+          required
+          placeholder="you@example.com"
+          class={inputClass}
+        />
+      </div>
+
+      <div class="space-y-2">
+        <label for="password" class="sr-only">Password</label>
+        <div class="relative isolate">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            autocomplete="current-password"
+            required
+            placeholder="Your password"
+            class:list={[inputClass, "relative z-0 pr-10"]}
+          />
+          <button
+            type="button"
+            id="password-toggle"
+            aria-label="Show password"
+            aria-pressed="false"
+            class="text-muted-foreground hover:text-foreground absolute top-1/2 right-1 z-10 inline-flex size-8 -translate-y-1/2 items-center justify-center rounded-md transition-colors"
+          >
+            <svg
+              id="password-eye-open"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-4"
+              aria-hidden="true"
+            >
+              <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"
+              ></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <svg
+              id="password-eye-closed"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="hidden size-4"
+              aria-hidden="true"
+            >
+              <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path>
+              <path
+                d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a18.45 18.45 0 0 1-2.16 3.19"
+              ></path>
+              <path d="M6.61 6.61A18.45 18.45 0 0 0 2 12s3 7 10 7a9.77 9.77 0 0 0 5.39-1.61"
+              ></path>
+              <line x1="2" x2="22" y1="2" y2="22"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="text-right">
+        <a
+          href="#"
+          class="text-foreground text-sm underline underline-offset-4"
+        >
+          Forgot password?
+        </a>
+      </div>
+
+      <div class="flex flex-col items-stretch gap-3 pt-2">
+        <Button type="submit" variant="default" class="w-full">
+          Sign in
+        </Button>
+        <p class="text-muted-foreground text-center text-sm">
+          Don't have an account?
+          <a
+            href="/signup"
+            class="text-foreground underline underline-offset-4"
+          >
+            Sign up
+          </a>
+        </p>
+      </div>
+    </form>
+  </AuthPageShell>
 </BaseLayout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("password-toggle");
+    const input = document.getElementById("password");
+    const eyeOpen = document.getElementById("password-eye-open");
+    const eyeClosed = document.getElementById("password-eye-closed");
+
+    if (!(toggle instanceof HTMLButtonElement) || !(input instanceof HTMLInputElement)) {
+      return;
+    }
+
+    toggle.addEventListener("mousedown", (event) => {
+      event.preventDefault();
+    });
+
+    toggle.addEventListener("click", () => {
+      const visible = input.type === "text";
+      input.type = visible ? "password" : "text";
+      toggle.setAttribute("aria-pressed", String(!visible));
+      toggle.setAttribute(
+        "aria-label",
+        visible ? "Show password" : "Hide password",
+      );
+      eyeOpen?.classList.toggle("hidden", !visible);
+      eyeClosed?.classList.toggle("hidden", visible);
+    });
+  });
+</script>

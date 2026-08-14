@@ -14,18 +14,22 @@ const navItems = [
 ];
 ---
 
-<section class="bg-white">
-  <Wrapper variant="standard">
+<section data-site-header class="bg-muted">
+  <Wrapper variant="default">
     <div
-      class="relative flex flex-col w-full py-2 bg-white md:items-center md:justify-between md:flex-row"
+      class="relative flex flex-col w-full py-2 bg-inherit md:items-center md:justify-between md:flex-row"
     >
       <div class="flex flex-row items-center justify-between lg:justify-start">
-        <a href="/">
-          <Logo class="textBase font-medium" />
+        <a
+          href="/"
+          class="flex items-center gap-2 text-foreground text-bse font-medium"
+        >
+          <Logo class="size-5" />
+          <span>AstroSaaS</span>
         </a>
         <button
           id="nav-toggle"
-          class="inline-flex items-center justify-center p-2 text-base-400 hover:text-black focus:outline-none focus:text-black md:hidden"
+          class="inline-flex items-center justify-center p-2 text-muted-foreground hover:text-foreground focus:outline-none focus:text-foreground md:hidden"
           type="button"
           aria-expanded="false"
         >
@@ -35,13 +39,13 @@ const navItems = [
       </div>
       <nav
         id="nav-menu"
-        class="flex-col items-center flex-grow gap-4 hidden md:flex md:justify-end md:flex-row w-full md:w-fit"
+        class="flex-col items-center grow gap-4 hidden md:flex md:justify-end md:flex-row w-full md:w-fit"
       >
         <div class="flex flex-col md:flex-row items-center gap-4">
           {
             navItems.map((item, index) => (
               <a
-                class="text-sm font-medium text-base-600 hover:text-accent-700"
+                class="text-sm font-medium text-muted-foreground hover:text-foreground"
                 href={item.href}
               >
                 {item.text}
@@ -52,14 +56,14 @@ const navItems = [
         <div class="flex flex-col md:flex-row items-center gap-2">
           <Button
             variant="muted"
-            size="sm"
+            size="xs"
             isLink
             href="/signup"
             class="w-full md:w-fit">Sign up</Button
           >
           <Button
             variant="default"
-            size="sm"
+            size="xs"
             isLink
             href="/login"
             class="w-full md:w-fit"

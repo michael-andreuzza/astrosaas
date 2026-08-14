@@ -1,0 +1,24 @@
+---
+const { muted = false, class: className } = Astro.props;
+---
+
+<svg
+  class:list={[
+    "mt-1.5 size-3 shrink-0 transition-opacity",
+    muted && "opacity-40",
+    className,
+  ]}
+  viewBox="0 0 542 542"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+>
+  <path
+    d="M295.5 246.25V0H246.25V246.25H0V295.5H246.25V541.75H295.5V295.5H541.75V246.25H295.5Z"
+    class="fill-muted-foreground/80"></path>
+  <rect
+    width="63"
+    height="63"
+    transform="translate(239.875 239.875)"
+    class="fill-background"></rect>
+</svg>

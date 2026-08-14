@@ -1,0 +1,58 @@
+---
+import Logo from "@/components/assets/Logo.astro";
+import ValleyImage from "@/images/valley-1.png";
+
+interface Props {
+  title: string;
+  subtitle: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<div class="flex min-h-dvh flex-col bg-muted lg:flex-row-reverse">
+  <aside
+    aria-hidden="true"
+    class="bg-background relative hidden min-h-dvh shrink-0 overflow-hidden lg:block lg:w-1/2"
+  >
+    <div class="absolute inset-0">
+      <img
+        src={ValleyImage.src}
+        width={ValleyImage.width}
+        height={ValleyImage.height}
+        alt=""
+        loading="eager"
+        decoding="async"
+        class="size-full max-w-none scale-110 object-cover"
+      />
+    </div>
+  </aside>
+
+  <div
+    class="bg-background flex min-h-dvh flex-1 items-center justify-center px-4 py-12 lg:w-1/2 lg:flex-none lg:px-10"
+  >
+    <div class="w-full max-w-sm">
+      <div class="space-y-4 text-center">
+        <a
+          href="/"
+          aria-label="Homepage"
+          class="text-foreground inline-flex items-center justify-center"
+        >
+          <Logo class="size-[42px] rounded" />
+        </a>
+        <div class="space-y-1.5 text-balance">
+          <h1 class="text-foreground text-xl font-semibold tracking-tight">
+            {title}
+          </h1>
+          <p class="text-muted-foreground text-sm leading-relaxed">
+            {subtitle}
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8">
+        <slot />
+      </div>
+    </div>
+  </div>
+</div>

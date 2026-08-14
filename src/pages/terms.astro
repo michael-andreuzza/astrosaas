@@ -7,24 +7,26 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
 <BaseLayout>
   <section>
-    <Wrapper variant="standard" class="py-20">
+    <Wrapper variant="default" class="py-20">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12">
         <div>
           <div class="lg:sticky lg:top-20">
-            <Text
-              tag="h1"
-              variant="displayMD"
-              class="tracking-tight font-semibold text-base-900"
-            >
-              Terms and conditions
-            </Text>
-            <Text
-              tag="p"
-              variant="textBase"
-              class="mt-4 text-base-500 font-medium"
-            >
-              Last updated on January 01, 2023
-            </Text>
+            <div class="text-balance">
+              <Text
+                tag="h1"
+                variant="displayMD"
+                class="text-foreground font-display tracking-tight"
+              >
+                Terms and conditions
+              </Text>
+              <Text
+                tag="p"
+                variant="textBase"
+                class="text-muted-foreground mt-1.5 font-normal"
+              >
+                Last updated on January 01, 2023
+              </Text>
+            </div>
           </div>
         </div>
         <Wrapper variant="prose" class="lg:col-span-2">

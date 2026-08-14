@@ -17,12 +17,12 @@ Beautifully crafted with Astro.js, and Tailwind CSS — Simple & easy to customi
 
 ## This template is using Tailwind CSS V4
 
-Now we are using only a CSS file. It's called `global.css` and it's located in the src/styles folder. Now we are eimporting Tailwind CSS on the same file instead of using the `tailwind.config.cjs` file. Like this:
+Now we are using only a CSS file. It's called `global.css` and it's located in the src/styles folder. Now we are importing Tailwind CSS on the same file instead of using the `tailwind.config.cjs` file. Like this:
 
 ```css
-// Importing Tailwind CSS
 @import "tailwindcss";
-// Importing Tailwind plugins
+@import "./colors.css";
+@import "./fonts.css";
 @plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/forms";
 ```
@@ -45,8 +45,23 @@ Inside of your Astro project, you'll see the following folders and files:
 /
 ├── public/
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   ├── components/
+│   │   ├── assets/          # Logo and shared assets
+│   │   ├── auth/            # Auth layout shell and helpers
+│   │   ├── fundations/      # Text, Button, Wrapper, icons, head
+│   │   ├── global/          # Navigation, Footer, CTA, Testimonial
+│   │   └── landing/         # Hero, features, pricing, FAQ
+│   ├── images/
+│   ├── layouts/
+│   ├── pages/
+│   │   ├── index.astro
+│   │   ├── login.astro
+│   │   ├── signup.astro
+│   │   └── terms.astro
+│   └── styles/
+│       ├── global.css       # Tailwind entry + base styles
+│       ├── colors.css       # Semantic color tokens
+│       └── fonts.css        # Font theme variables
 └── package.json
 ```
 
@@ -74,15 +89,15 @@ All commands are run from the root of the project, from a terminal:
 Feel free to check Astro's [documentation](https://docs.astro.build)
 
 ---
-Updated on 14th  Dec 2025
+Updated on 14th Aug 2026
 
-## Added
-- Astro SEO - Powered by [@astrolib/seo](https://github.com/onwidget/astrolib/tree/main/packages/seo)
-- Added reusable components for text, button, icons and wrapper
-- New color palette
-- New font: Geist
-- Remove FAQ and moved it to new section
-- Remove AlpineJS and added vanilla JS
+## Updates
+- Visual refresh across the site
+- New color system, Geist + Noto Serif fonts, updated Button and Wrapper components
+- Restyled landing page (Hero, features, pricing, FAQ, CTA) and navigation/footer
+- New split-panel login page with Google sign-in
+- Removed SectionTwo; homepage is Hero → Features → Testimonial → Pricing → FAQ → CTA
+- Astro SEO, reusable Text/Button/Wrapper components, vanilla JS (no Alpine)
 ---
 
 ## Components
@@ -109,31 +124,30 @@ Updated on 14th  Dec 2025
 - Button Component  
   A customizable button component with options to fit your design needs:
 
-- **Variants:** Choose from predefined styles like `primary` (dark background) and `secondary` (lighter background), with support for dark mode.
-- **Sizes:** Select `small` or `medium` for different button heights and padding.
-- **Gaps:** Control the spacing between content with the `gapSize` prop (either `small` or `medium`).
+- **Variants:** `default`, `accent`, `muted`, and `none`
+- **Sizes:** `default`, `xs`, `sm`, `lg`, `xl`, and `2xl`, plus icon-only sizes
 - **Custom Classes:** Apply additional styles using the `class` prop.
 - **Slots:** Include icons or extra content with optional `left-icon` and `right-icon` slots.  
   Example usage:
 
 ```astro
 <!-- Default button -->
-<Button size="small" variant="primary">Primary small</Button>
+<Button size="sm" variant="default">Get started</Button>
 <!-- Button with icon -->
-<Button iconOnly size="small" variant="primary">·</Button>
+<Button iconOnly size="icon-sm" variant="default">·</Button>
 <!-- Button as link -->
-<Button isLink={true} href="#_" size="small" variant="primary">Primary small</Button>
+<Button isLink href="/signup" size="default" variant="accent">Sign up</Button>
 ```
 
 - Wrapper Component  
   A flexible layout component that helps with consistent spacing and alignment.
 
-- **Variants:** The default `standard` variant includes responsive widths, centered content, and padding.
+- **Variants:** `default`, `nav`, `narrow`, `wide`, and `prose` for responsive widths and typography
 - **Custom Classes:** Add or change styles with the `class` prop.
 - **Content Slot:** Easily add any child components or content inside.
 
 ```astro
-<Wrapper variant="standard">
-Your content goes here
+<Wrapper variant="default">
+  Your content goes here
 </Wrapper>
 ```

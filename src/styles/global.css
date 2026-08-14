@@ -1,31 +1,29 @@
 @import "tailwindcss";
+@import "./colors.css";
+@import "./fonts.css";
 @plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/forms";
-@theme {
-  --font-sans: "Geist", sans-serif;
 
-  /* Accent  */
---color-accent-50: oklch(0.966 0.016 262.8);
---color-accent-100: oklch(0.922 0.037 267.4);
---color-accent-200: oklch(0.863 0.067 265.4);
---color-accent-300: oklch(0.777 0.113 262.9);
---color-accent-400: oklch(0.685 0.165 264.2);
---color-accent-500: oklch(0.571 0.230 265.5);
---color-accent-600: oklch(0.497 0.257 266.0);
---color-accent-700: oklch(0.447 0.255 266.1);
---color-accent-800: oklch(0.390 0.213 267.4);
---color-accent-900: oklch(0.346 0.167 268.8);
---color-accent-950: oklch(0.261 0.106 272.2);
-/* Base */
---color-base-50: oklch(0.985 0.002 247.839);
-  --color-base-100: oklch(0.967 0.003 264.542);
-  --color-base-200: oklch(0.928 0.006 264.531);
-  --color-base-300: oklch(0.872 0.01 258.338);
-  --color-base-400: oklch(0.707 0.022 261.325);
-  --color-base-500: oklch(0.551 0.027 264.364);
-  --color-base-600: oklch(0.446 0.03 256.802);
-  --color-base-700: oklch(0.373 0.034 259.733);
-  --color-base-800: oklch(0.278 0.033 256.848); /* Default */
-  --color-base-900: oklch(0.21 0.034 264.665);
-  --color-base-950: oklch(0.13 0.028 261.692);
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      @apply bg-muted;
+    }
+  }
+
+  html {
+    @apply scroll-smooth font-sans;
+  }
 }

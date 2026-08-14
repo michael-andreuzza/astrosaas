@@ -1,0 +1,8 @@
+@theme inline {
+  --font-heading: var(--font-display);
+  --font-display: var(--font-noto-serif);
+  --font-sans: var(--font-geist);
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}

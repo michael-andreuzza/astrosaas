@@ -12,7 +12,7 @@ const ads = [
     href: "https://lexingtonthemes.com/",
     imgSrc: "https://lexingtonthemes.com/OpenGraph/twitter.png",
     description:
-      "Launch faster with premium Astro V7 & Tailwind CSS, Sanity CMS and EmDash CMS themes",
+      "Launch faster with premium Astro V7 & Tailwind CSS, Sanity CMS and EmDash CMS themes.",
   },
   {
     title: "Kobbe",
@@ -26,21 +26,48 @@ const ads = [
 ---
 
 <section>
-  <Wrapper variant="standard" class="py-20">
+  <Wrapper variant="default" class="py-20">
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
       {
         ads.map((ad) => (
-          <div class="group relative  ring-4 ring-base-50 border border-base-200 cursor-pointer   rounded-2xl overflow-hidden">
+          <div class="group relative border border-border cursor-pointer  rounded-xl bg-background overflow-hidden">
             <a href={ad.href} class="absolute inset-0" />
             <div class="flex flex-col items-start justify-between h-full ">
               <Image
                 alt={ad.description}
                 width={400}
                 height={240}
-                class="block w-full h-full  cursor-pointer overflow-hidden  object-cover  aspect-16/8 object-left"
+                class="block w-full h-full  cursor-pointer overflow-hidden  object-cover  aspect-16/8 object-top"
                 src={ad.imgSrc}
                 style={{ color: "transparent" }}
               />
+              <div class="p-8  border-b border-border order-first h-full flex flex-col justify-between gap-8">
+                <div>
+                  <Text
+                    tag="h3"
+                    variant="textLG"
+                    class="font-medium text-foreground"
+                  >
+                    {ad.title}
+                  </Text>
+                  <Text
+                    tag="p"
+                    variant="textBase"
+                    class="text-muted-foreground mt-1"
+                  >
+                    {ad.description}
+                  </Text>
+                </div>
+                <Button
+                  isLink
+                  size="sm"
+                  variant="default"
+                  href={ad.href}
+                  class="w-fit"
+                >
+                  Visit {ad.title}
+                </Button>
+              </div>
             </div>
           </div>
         ))

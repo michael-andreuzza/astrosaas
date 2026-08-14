@@ -11,7 +11,7 @@ const sections = [
       { name: "Home", href: "/" },
       { name: "Terms", href: "/terms" },
       { name: "Sign up", href: "/signup" },
-      { name: "Sign In", href: "/signup" },
+      { name: "Sign in", href: "/login" },
     ],
   },
   {
@@ -29,6 +29,14 @@ const sections = [
       {
         name: "Lexington Themes",
         href: "https://lexingtonthemes.com/",
+      },
+      {
+        name: "Kobbe",
+        href: "https://kobbe.io/",
+      },
+      {
+        name: "NonCommon",
+        href: "https://noncommon.site/",
       },
     ],
   },
@@ -50,48 +58,47 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer>
-  <Wrapper variant="standard" class="py-12">
-    <div class="grid grid-cols-2 lg:grid-cols-4 items-start gap-x-8 gap-y-24">
-      <a href="/">
-        <Logo class="textBase font-medium" />
+  <Wrapper variant="default" class="py-12">
+    <nav
+      class="grid grid-cols-2 gap-8 text-sm md:grid-cols-4 lg:grid-cols-5"
+      aria-label="Footer"
+    >
+      <a href="/" aria-label="Homepage">
+        <Logo class="text-foreground h-12 w-fit shrink-0" />
       </a>
-      <div
-        class="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 lg:col-span-3"
-      >
-        {
-          sections.map(({ title, links }) => (
-            <div>
-              <Text
-                tag="h3"
-                variant="textSM"
-                class=" text-base-900 font-medium uppercase"
-              >
-                {title}
-              </Text>
-              <ul role="list" class="mt-4 space-y-1">
-                {links.map(({ name, href }) => (
-                  <li>
-                    <a
-                      href={href}
-                      class="text-sm font-medium text-base-500 hover:text-accent-600"
-                    >
-                      {name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-    <div class="border-t pt-6 border-base-200 mt-8">
-      <p class="text-xs text-base-500 lg:col-span-2">
-        © {currentYear} Lexington Themes. All rights reserved. The biggest Astro
-        collection with premium themes. Clean code. Modern design. Easy to customize.
-        Production-ready. Trusted by 8,000+ freelancers, startups, and agencies —
-        Awarded by Astro. A side project by <a
-          class="text-sm text-black hover:text-accent-700 underline"
+      {
+        sections.map(({ title, links }) => (
+          <div class="space-y-3">
+            <Text
+              tag="p"
+              variant="textXS"
+              class="text-foreground font-semibold uppercase"
+            >
+              {title}
+            </Text>
+            <ul role="list" class="space-y-1">
+              {links.map(({ name, href }) => (
+                <li>
+                  <a
+                    href={href}
+                    class="text-muted-foreground hover:text-foreground text-xs font-medium transition-colors"
+                  >
+                    {name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </nav>
+    <div class="border-t pt-6 border-border mt-8">
+      <p class="text-xs text-muted-foreground lg:col-span-2">
+        © {currentYear} Lexington Themes. All rights reserved. The biggest Astro collection
+        with premium themes. Clean code. Modern design. Easy to customize. Production-ready.
+        Trusted by 8,000+ freelancers, startups, and agencies — Awarded by Astro.
+        A side project by <a
+          class="text-sm text-foreground hover:text-foreground underline"
           href="https://michaelandreuzza.com/">Michael Andreuzza</a
         > This website was built with Astro &amp; Tailwind. Crafted in Åland Islands,
         Finland.

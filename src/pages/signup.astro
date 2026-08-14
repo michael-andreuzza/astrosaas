@@ -8,26 +8,28 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
 <BaseLayout>
   <section>
-    <Wrapper variant="standard" class="py-20">
+    <Wrapper variant="default" class="py-20">
       <div class="max-w-sm mx-auto">
-        <Text
-          tag="h1"
-          variant="displaySM"
-          class="tracking-tight font-semibold text-base-900"
-        >
-          Join our community
-        </Text>
-        <Text
-          tag="p"
-          variant="textBase"
-          class="mt-4 text-base-500 font-medium text-balance"
-        >
-          Sign up to join our community and start building your brand.
-        </Text>
+        <div class="text-balance">
+          <Text
+            tag="h1"
+            variant="displaySM"
+            class="text-foreground font-display tracking-tight"
+          >
+            Join our community
+          </Text>
+          <Text
+            tag="p"
+            variant="textBase"
+            class="text-muted-foreground mt-1.5 font-normal"
+          >
+            Sign up to join our community and start building your brand.
+          </Text>
+        </div>
         <form action="#" method="POST" class="mx-auto mt-12">
           <div class="flex flex-col gap-y-6">
             <div>
-              <label class="text-sm text-base-500 font-medium">
+              <label class="text-sm text-muted-foreground font-medium">
                 First name
               </label>
               <div class="mt-2.5">
@@ -37,17 +39,12 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
                   id="first-name"
                   autocomplete="given-name"
                   required
-                  aria-required="true"
-                  aria-describedby="first-name-error"
-                  class="block w-full h-10 px-4 py-2 text-sm text-accent-700 duration-300 bg-white border border-transparent rounded-lg appearance-none ring-1 ring-base-200 placeholder-base-400 focus:border-base-300 focus:bg-transparent focus:outline-none focus:ring-accent-700 focus:ring-offset-2 focus:ring-2 sm:text-sm"
+                  class="block w-full h-10 px-4 py-2 text-sm text-foreground duration-300 bg-background border border-transparent rounded-lg appearance-none ring-1 ring-border placeholder:text-muted-foreground focus:border-input focus:bg-transparent focus:outline-none focus:ring-ring focus:ring-offset-2 focus:ring-2 sm:text-sm"
                 />
-                <span id="first-name-error" class="text-red-600 text-sm hidden">
-                  Please enter your first name.
-                </span>
               </div>
             </div>
             <div>
-              <label class="text-sm text-base-500 font-medium"> Email </label>
+              <label class="text-sm text-muted-foreground font-medium"> Email </label>
               <div class="mt-2.5">
                 <input
                   type="email"
@@ -55,13 +52,8 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
                   id="email"
                   autocomplete="email"
                   required
-                  aria-required="true"
-                  aria-describedby="email-error"
-                  class="block w-full h-10 px-4 py-2 text-sm text-accent-700 duration-300 bg-white border border-transparent rounded-lg appearance-none ring-1 ring-base-200 placeholder-base-400 focus:border-base-300 focus:bg-transparent focus:outline-none focus:ring-accent-700 focus:ring-offset-2 focus:ring-2 sm:text-sm"
+                  class="block w-full h-10 px-4 py-2 text-sm text-foreground duration-300 bg-background border border-transparent rounded-lg appearance-none ring-1 ring-border placeholder:text-muted-foreground focus:border-input focus:bg-transparent focus:outline-none focus:ring-ring focus:ring-offset-2 focus:ring-2 sm:text-sm"
                 />
-                <span id="email-error" class="text-red-600 text-sm hidden">
-                  Please enter a valid email address.
-                </span>
               </div>
             </div>
           </div>
@@ -70,26 +62,26 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
               id="agreement"
               name="agreement"
               type="checkbox"
-              class="size-4 rounded border-base-300 text-accent-600 focus:ring-accent-600 shadow"
+              class="size-4 rounded border-input text-foreground focus:ring-ring shadow"
             />
-            <label class="undefined block text-sm text-base-500">
+            <label class="undefined block text-sm text-muted-foreground">
               You agree to our
-              <a class="text-accent-700 hover:text-base-500" href="#_">
+              <a class="text-foreground hover:text-muted-foreground" href="#_">
                 Terms of service
               </a>
               and
-              <a class="t text-accent-700 hover:text-base-500" href="#_">
+              <a class="t text-foreground hover:text-muted-foreground" href="#_">
                 Privacy Policy
               </a>
             </label>
           </div>
-          <Button variant="default" size="base" class="mt-8 w-full">
+          <Button variant="default" class="mt-8 w-full">
             Sign up
           </Button>
           <div class="flex items-center mt-4">
-            <Text tag="p" variant="textSM" class="text-base-500">
+            <Text tag="p" variant="textSM" class="text-muted-foreground">
               Don't have an account? Already have an account?
-              <a class="text-accent-700 hover:text-base-500" href="/login">
+              <a class="text-foreground hover:text-muted-foreground" href="/login">
                 Sign in
               </a>
             </Text>

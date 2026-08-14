@@ -1,12 +1,6 @@
 ---
-// Fundations
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-// Icons
-import Edit from "@/components/fundations/icons/Edit.astro";
-import Complete from "@/components/fundations/icons/Complete.astro";
-import Eye from "@/components/fundations/icons/Eye.astro";
-import Color from "@/components/fundations/icons/Color.astro";
 
 const features = [
   "Contact Management",
@@ -25,101 +19,105 @@ const features = [
 
 const featureItems = [
   {
-    icon: Edit,
     title: "Contact Management",
     description:
-      "Easily organize and manage all your customer contacts in one place.",
+      "Organize every contact, company, and note in one searchable workspace.",
   },
   {
-    icon: Complete,
     title: "Lead Tracking",
     description:
-      "Track leads from initial contact to conversion with detailed insights.",
+      "Follow leads from first touch to closed deal with a clear activity history.",
   },
   {
-    icon: Eye,
     title: "Sales Forecasting",
-    description: "Predict future sales trends and plan strategies accordingly.",
+    description:
+      "Project revenue by stage and close date so planning stays grounded.",
   },
   {
-    icon: Color,
     title: "Automated Workflows",
-    description: "Streamline processes with customizable automated workflows.",
+    description:
+      "Trigger tasks, emails, and handoffs when records move or conditions match.",
+  },
+  {
+    title: "Visual pipeline",
+    description:
+      "Drag deals across stages on a kanban board the whole team can read.",
+  },
+  {
+    title: "Email & calendar sync",
+    description:
+      "Log conversations automatically by connecting Gmail or Outlook.",
+  },
+  {
+    title: "Reporting dashboards",
+    description:
+      "Track conversion, pipeline health, and rep activity without spreadsheets.",
+  },
+  {
+    title: "Integrations & API",
+    description:
+      "Connect your stack with webhooks, Zapier, and a REST API for custom flows.",
   },
 ];
 ---
 
-<section id="features">
-  <Wrapper variant="standard" class="py-20">
-    <div class="text-center max-w-2xl mx-auto lg:text-balance">
-      <Text
-        tag="span"
-        variant="textSM"
-        class="leading-normal font-bold uppercase text-accent-700"
-      >
-        benefits
-      </Text>
-      <Text
-        tag="h2"
-        variant="displayMD"
-        class="tracking-tight mt-4 font-semibold text-base-900"
-      >
-        Empowering businesses with intelligent CRM solutions
-      </Text>
-      <Text tag="p" variant="textBase" class="mt-4 text-base-500 font-medium">
-        The most efficient way to manage customer relationships and boost sales
-        performance.
-      </Text>
+<section id="features" class="pt-8">
+  <Wrapper variant="default" class="py-20">
+    <div class="mx-auto max-w-xl text-center">
+      <div class="text-balance">
+        <Text
+          tag="h2"
+          variant="displayMD"
+          class="text-foreground font-display tracking-tight"
+        >
+          Empowering businesses with intelligent CRM solutions
+        </Text>
+        <Text
+          tag="p"
+          variant="textBase"
+          class="text-muted-foreground mt-1.5 font-normal"
+        >
+          The most efficient way to manage customer relationships and boost
+          sales performance.
+        </Text>
+      </div>
     </div>
-    <div
-      class="relative py-12 mx-auto overflow-hidden overflow-x-hidden 2xl:max-w-screen-xl"
-    >
-      <div class="grid justify-between w-full">
+
+    <div class="relative mx-auto overflow-hidden overflow-x-hidden py-12">
+      <div class="grid w-full justify-between">
         <div
-          class="absolute inset-0 left-0 z-10 from-white via-transparent w-44 bg-gradient-to-r"
+          class="from-muted absolute inset-0 left-0 z-10 w-44 bg-linear-to-r via-transparent"
         >
         </div>
         <div
-          class="absolute inset-0 left-0 z-10 ml-auto from-white via-transparent w-44 bg-gradient-to-l"
+          class="from-muted absolute inset-0 left-0 z-10 ml-auto w-44 bg-linear-to-l via-transparent"
         >
         </div>
       </div>
-      <div class="relative flex items-center gap-2 whitespace-nowrap t">
+      <div class="relative flex items-center gap-2 whitespace-nowrap">
         {
           features.map((feature) => (
-            <span class="inline-flex items-center font-medium relative text-base-700 bg-base-50 px-4 py-1.5 text-sm rounded-lg">
+            <span class="text-foreground/80 bg-background border border-border relative inline-flex items-center rounded-lg px-4 py-1.5 text-sm font-medium">
               {feature}
             </span>
           ))
         }
       </div>
     </div>
-    <dl
-      class="grid grid-cols-2 text-center gap-x-6 gap-y-12 lg:grid-cols-4 lg:gap-y-16"
+
+    <div
+      class="mx-auto mt-12 grid max-w-6xl gap-x-6 gap-y-8 text-balance sm:grid-cols-2 lg:grid-cols-4 lg:text-center"
     >
       {
         featureItems.map((item) => (
-          <div>
-            <div class="flex flex-col gap-3 ">
-              <item.icon class="size-5 mx-auto text-accent-700" />
-              <dt>
-                <Text
-                  tag="h3"
-                  variant="textLG"
-                  class="text-base-900 font-medium"
-                >
-                  {item.title}
-                </Text>
-              </dt>
-            </div>
-            <dd>
-              <Text tag="p" variant="textBase" class="mt-2 text-base-500">
-                {item.description}
-              </Text>
-            </dd>
+          <div class="space-y-1">
+            <h3 class="text-foreground text-base font-medium">{item.title}</h3>
+            <p class="text-muted-foreground text-sm text-pretty">
+              {item.description}
+            </p>
           </div>
         ))
       }
-    </dl>
+    </div>
   </Wrapper>
 </section>

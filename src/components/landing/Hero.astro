@@ -9,52 +9,50 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 ---
 
 <section class="overflow-hidden">
-  <Wrapper class="pt-32">
-    <div class="max-w-2xl text-center mx-auto lg:text-balance">
-      <Text
-        tag="span"
-        variant="textSM"
-        class="leading-normal font-bold uppercase text-accent-700"
-      >
-        welcome
-      </Text>
-      <Text
-        tag="h1"
-        variant="displayMD"
-        class="tracking-tight mt-4 font-semibold text-base-900"
-      >
-        A starter template built with Astro and Tailwind CSS for your next
-        project
-      </Text>
-      <Text tag="p" variant="textBase" class="mt-4 text-base-500 font-medium text-balance">
-        Feature sections, a pricing table, testimonial, CTA, and full forms.
-      </Text>
-      <div class="flex flex-wrap items-center gap-2 justify-center mt-12">
-        <Button
-          variant="muted"
-          size="sm"
-          isLink
-          href="https://github.com/michael-andreuzza/astrosaas">GitHub</Button
+  <Wrapper class="pt-20 lg:pt-28">
+    <div class="mx-auto max-w-2xl text-center">
+      <div class="text-balance">
+        <Text
+          tag="h1"
+          variant="displayMD"
+          class="text-foreground font-display tracking-tight"
         >
+          A starter template built with Astro and Tailwind CSS for your next
+          project
+        </Text>
+        <Text
+          tag="p"
+          variant="textBase"
+          class="text-muted-foreground mt-1.5 font-normal"
+        >
+          Feature sections, a pricing table, testimonial, CTA, and full forms.
+        </Text>
+      </div>
+      <div class="mx-auto mt-4 flex w-fit flex-wrap justify-center gap-2">
         <Button
-          variant="accent"
-          size="sm"
+          variant="default"
+          size="xs"
           isLink
           href="https://lexingtonthemes.com"
         >
           More themes</Button
         >
+        <Button
+          variant="muted"
+          size="xs"
+          isLink
+          href="https://github.com/michael-andreuzza/astrosaas">GitHub</Button
+        >
       </div>
     </div>
 
-    <div class="relative w-full mx-auto max-w-7xl items-center py-12 pb-12">
+    <div class="mt-12">
       <Image
         alt="Dashboard"
         width={900}
         height={700}
-        alt="#_"
         src={DashboardLight}
-        class="relative w-full ring-4 ring-base-50 border border-base-200 lg:rounded-2xl object-cover rounded"
+        class="relative w-full rounded-xl object-cover"
       />
     </div>
   </Wrapper>

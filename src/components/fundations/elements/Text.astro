@@ -8,54 +8,57 @@ export interface Props {
     | "small"
     | "strong"
     | "blockquote"
+    | "div"
+    | "summary"
+    | "label"
     | "h1"
     | "h2"
     | "h3"
     | "h4"
     | "h5"
-    | "h6"; // Defines allowed HTML tags
-  id?: string; // Optional 'id' attribute
-  rel?: string; // Optional rel attribute for anchor tags
-  style?: string; // Specifies inline styles
-  target?: string; // Optional target attribute for links
-  href?: string; // Optional 'href' attribute for anchor tags
-  title?: string; // Optional title attribute for anchor tags
-  variant?: string; // Specifies the style variant of the text
-  class?: string; // Optional prop for additional custom classes
-  ariaLabel?: string; // Optional aria-label attribute for anchor tags
+    | "h6";
+  id?: string;
+  rel?: string;
+  style?: string;
+  target?: string;
+  href?: string;
+  title?: string;
+  variant?: string;
+  class?: string;
+  ariaLabel?: string;
 }
 
-// Define text styles for each variant
 const textStyles: Record<string, string> = {
-  display6XL: "text-4xl  sm:text-7xl md:text-9xl lg:text-[12rem]",
-  display5XL: "text-4xl  sm:text-7xl md:text-8xl lg:text-[10rem]",
-  display4XL: "text-4xl  sm:text-7xl md:text-8xl lg:text-9xl",
-  display3XL: "text-5xl  sm:text-6xl md:text-7xl lg:text-8xl",
-  display2XL: "text-5xl  sm:text-5xl md:text-6xl lg:text-7xl",
-  displayXL: "text-4xl  sm:text-4xl md:text-5xl lg:text-6xl",
-  displayLG: "text-3xl  sm:text-3xl md:text-4xl lg:text-5xl",
-  displayMD: "text-2xl  sm:text-2xl md:text-3xl lg:text-4xl",
-  displaySM: "text-lg  sm:text-xl md:text-2xl lg:text-3xl",
-  displayXS: "text-base  sm:text-lg md:text-xl lg:text-2xl",
-  textXL: "text-lg sm:text-xl md:text-2xl",
-  textLG: "text-base sm:text-lg md:text-xl ",
-  textBase: "text-base",
-  textSM: "text-sm ",
-  textXS: "text-xs ",
+  displayTitle: "text-3xl md:text-4xl lg:text-5xl",
+  displaySubTitle: "text-base md:text-lg",
+  display6XL:
+    "text-4xl sm:text-7xl md:text-9xl lg:text-[12rem] 2xl:text-[15rem]",
+  display5XL:
+    "text-4xl sm:text-7xl md:text-8xl lg:text-[10rem] 2xl:text-[14rem]",
+  display4XL: "text-4xl sm:text-7xl md:text-8xl lg:text-9xl 2xl:text-[12rem]",
+  display3XL: "text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-[10rem]",
+  display2XL: "text-5xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-9xl",
+  displayXL: "text-4xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-8xl",
+  displayLG: "text-3xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-7xl",
+  displayMD: "text-2xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-6xl",
+  displaySM: "text-2xl lg:text-3xl 2xl:text-5xl",
+  displayXS: "text-lg md:text-xl lg:text-2xl 2xl:text-4xl",
+  textXL: "text-xl md:text-2xl 2xl:text-3xl",
+  textLG: "text-base sm:text-lg md:text-xl 2xl:text-2xl",
+  textBase: "text-base 2xl:text-lg",
+  textSM: "text-sm 2xl:text-base",
+  textXS: "text-xs 2xl:text-sm",
+  textXXS: "text-[0.65rem] md:text-xs 2xl:text-sm",
 };
 
-// Destructure props with default values
 const {
-  tag: Tag = "p", // Defaults to paragraph tag
-  class: className = "", // No additional classes by default
-  variant = "textBase", // Defaults to textMD style variant
-  ...rest // Collect remaining props
+  tag: Tag = "p",
+  class: className = "",
+  variant = "textBase",
+  ...rest
 } = Astro.props;
 
-// Get the base classes for the specified variant
-const baseClasses = textStyles[variant] || textStyles.textBase; // Fallback to textMD if variant not found
-
-// Combine base classes with any additional custom classes
+const baseClasses = textStyles[variant] || textStyles.textBase;
 const combinedClasses = `${baseClasses} ${className}`.trim();
 ---
 
