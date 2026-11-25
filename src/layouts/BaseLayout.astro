@@ -12,6 +12,14 @@ const { hideNavigation = false, hideFooter = false } = Astro.props;
 
 <html lang="en" class="scroll-smooth">
   <head>
+    <script is:inline>
+      (function () {
+        if (window.top !== window.self) return;
+        var h = location.hostname;
+        if (h === "localhost" || h === "127.0.0.1") return;
+        location.replace("https://lexingtonthemes.com/viewports/astrosaas");
+      })();
+    </script>
     <BaseHead />
   </head>
   <body class="flex flex-col bg-muted min-h-dvh">
